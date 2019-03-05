@@ -1,0 +1,52 @@
+
+
+
+
+/*USB Keys page*/
+
+.card {
+    margin-bottom: 15px;
+}
+
+
+.paginationbar {
+	margin-top: 3rem;
+}
+
+.card-img-top {
+    width: 100%;
+}
+
+
+
+
+/*Modals*/
+
+
+.modalphoto {
+	height: 80%;
+	width: 80%;
+	justify-content: left;
+}
+/*
+.modalhalf {
+	size: 50%;
+	display: inline-block;
+}*/
+
+
+.usbprice {
+	font-style: bold;
+	font-size: 1.2rem;
+	float: right;
+	padding-top: 4rem;
+}
+
+.characteristics {
+	text-decoration: underline;
+}
+
+.btn-primary {
+	background-color: #F1AD1D;
+	border-color:  #F1AD1D;
+}
