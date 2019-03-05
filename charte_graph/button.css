@@ -1,0 +1,21 @@
+.btn{
+	border-radius: 0px;
+}
+
+.btn_item{
+	text-decoration: none;
+	padding: 13px 35px;
+	color: white;
+	font-size: 14px;
+	font-weight: 700;
+	background-image: none;
+	background-color: #f1ad1d;
+	
+}
+
+.btn_item:hover{
+	color: #f1ad1d;
+	background-color: #333333;
+	text-decoration: none;
+	border: solid 1px #333333;
+}
