@@ -12,6 +12,10 @@ About us:
 */
 
 
+body{
+	background-color: rgba(0,0,0,0.05)
+}
+
 /*Section padding*/
 
 section {
@@ -61,6 +65,14 @@ p {
 	height: 3px;
 	margin: 2% 0% 10% 0%;
 	background-color: #F1AD1D;
+}
+
+.sep_aboutus {
+	display: inline-block;
+	width: 80px;
+	height: 3px;
+	margin: 2% 0% 10% 0%;
+	background-color: #333333;
 }
 
 /*Categorie*/
