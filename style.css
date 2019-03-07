@@ -13,7 +13,8 @@ About us:
 
 
 body{
-	background-color: rgba(0,0,0,0.05)
+	background-color: rgba(0,0,0,0.05);
+
 }
 
 /*Section padding*/
@@ -170,7 +171,6 @@ p {
 
 /*About Us*/
 
-
 .aboutusphoto {
 	width: 100%;
 	border-radius: 50%;
@@ -184,9 +184,10 @@ p {
 	 font-style: italic;
 }
 
-#about {
+#about{
 	background-color: #f1ad1d;
 }
+
 
 
 
