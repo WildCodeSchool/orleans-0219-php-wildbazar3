@@ -1,0 +1,49 @@
+ @import url('https://fonts.googleapis.com/css?family=Lato|Montserrat'); 
+.imgfooter{
+	max-width: 15vw;
+}
+.prix{
+	font-family: Lato;
+	font-style: bold;
+	font-size: 1.2rem;
+	float: right;
+	padding: 1vw;
+}
+.textmodal-cara{
+	padding-left: 5vw;
+	padding-bottom: 1vw;
+}
+.textmodal-desc{
+	padding: 1vw;
+}
+.card{
+	margin-bottom: 1vw;	
+	margin-right: 12px;
+}
+.card{
+	width: 17rem;
+}
+.card img{
+	max-width: 15rem;
+}
+/*style button*/
+.btn{
+	border-radius: 0px;
+}
+
+.btn_item{
+	text-decoration: none;
+	padding: 13px 20px;
+	color: white;
+	font-size: 14px;
+	font-weight: 900;
+	background-image: none;
+	background-color: #f1ad1d;
+	
+}
+
+.btn_item:hover{
+	color: #f1ad1d;
+	background-color: #333333;
+	text-decoration: none;
+}
