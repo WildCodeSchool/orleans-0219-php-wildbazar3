@@ -1,19 +1,16 @@
-
+ @import url('https://fonts.googleapis.com/css?family=Lato|Montserrat'); 
 
 /*Background colors*/
 /*
 Nav and footer:
 #F1AD1D - Old WCS orange
-
 Categories and Top selling:
-
 About us:
-
 */
 
 
 body{
-	background-color: rgba(0,0,0,0.05)
+	background-color: rgba(0,0,0,0.05);
 }
 
 /*Section padding*/
@@ -33,7 +30,7 @@ h1 {
 	font-family: 'Montserrat', sans-serif; 
 	font-size: 3rem; 
 	text-align: center;
-	padding: 20px 0px;
+	padding: 20px 0p#1x;
 }
 
 h2 {
@@ -219,4 +216,58 @@ p {
     margin: 25px;
 }
 
+
+
+/*footer*/
+
+footer{
+	background-color: #F1AD1D;
+}
+.categories{
+	padding-top: 1.5rem;
+}
+.categories li{
+	background-color: #F1AD1D;
+	padding: .1rem 1.25rem;
+	font-family: 'Lato', sans-serif;
+	font-size: calc(10px + 0.10vw);
+}
+.imgfooter{
+	max-width: calc(45px + 0.30vw);
+	padding-top: 0.2rem;
+}
+.h4-footer{
+	padding-top: 0.7rem;
+	font-weight: 900;
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(22px + 0.30vw);
+}
+.address{
+	font-size: 1rem;
+}
+.formheader{
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(18px + 0.30vw);
+	font-weight: 900;
+	padding-top: 1.5rem;
+}
+.btn_footer{
+	text-decoration: none;
+	margin-bottom: 1rem;
+	padding: 4px 4px;
+	color: white;
+	font-size: 14px;
+	font-weight: 900;
+	background-color: #333333;
+	color: #f1ad1d;
+}
+.btn_footer:hover{
+	background-color: #f1ad1d;
+	text-decoration: none;
+	border: 1px solid #333333;
+}
+.formlabel{
+	font-size: 1rem;
+	font-family: 'Montserrat', sans-serif;
+}
 
