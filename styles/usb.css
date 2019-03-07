@@ -59,7 +59,7 @@
 
 .usbjumbo {
 /*	background-image: url("../usbkeyphotos/usbkeysdark.jpg");*/
-	background-color:  	#505050;
+	background-color:  	#606060;
 }
 
 .whitecent {
@@ -72,3 +72,13 @@
 	background-color: rgba(0, 0, 0, 0.4);
 	margin: auto;
 }*/
+
+.orangeb {
+	background-color: #F1AD1D !important;
+	border-color: #F1AD1D !important;
+/*	color: #F1AD1D !important;*/
+}
+
+.oranget {
+	color: #F1AD1D !important;
+}
