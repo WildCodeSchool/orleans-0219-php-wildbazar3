@@ -157,6 +157,7 @@ p {
 
 
 
+
 /* de Header branch*/
 
 .jumbotron
@@ -167,4 +168,41 @@ p {
 {
 	text-align: center;
 }
+
+
+
+/*About Us*/
+
+
+.aboutusphoto {
+	width: 100%;
+}
+
+.aboutustext {
+	font-size: 1.2rem;
+}
+
+.motto {
+	 font-style: italic;
+}
+
+#about {
+	background-color: #FFD274;
+}
+
+
+
+
+/*Top Selling*/
+
+
+.newtopclass {
+	padding: 20px;
+    width: 100%;
+}
+
+.cardmarge25 {
+    margin: 25px;
+}
+
 
