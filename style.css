@@ -166,3 +166,38 @@ p {
 	border: solid 1px #333333;
 }
 
+
+
+/*About Us*/
+
+
+.aboutusphoto {
+	width: 100%;
+}
+
+.aboutustext {
+	font-size: 1.2rem;
+}
+
+.motto {
+	 font-style: italic;
+}
+
+#about {
+	background-color: #FFD274;
+}
+
+
+
+
+/*Top Selling*/
+
+
+.newtopclass {
+	padding: 20px;
+    width: 100%;
+}
+
+.cardmarge25 {
+    margin: 25px;
+}
