@@ -63,6 +63,7 @@ p {
 	background-color: #F1AD1D;
 }
 
+
 /*Categorie*/
 
 .categorie-col-12 > .col-12{
@@ -152,5 +153,18 @@ p {
 	background-color: #333333;
 	text-decoration: none;
 	border: solid 1px #333333;
+}
+
+
+
+/* de Header branch*/
+
+.jumbotron
+{
+	text-align: center;
+}
+.test
+{
+	text-align: center;
 }
 
