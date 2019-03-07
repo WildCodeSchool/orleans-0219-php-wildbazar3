@@ -1,33 +1,9 @@
-
-
-/*Background colors*/
-/*
-Nav and footer:
-#F1AD1D - Old WCS orange
-
-Categories and Top selling:
-
-About us:
-
-*/
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
 
 
 body{
-	background-color: rgba(0,0,0,0.05)
+	background-color: rgba(0,0,0,0.05);
 }
-
-/*Section padding*/
-
-section {
-	padding-bottom: 5%;
-}
-
-
-
-
-/*Fonts*/
-
-
 
 h1 {
 	font-family: 'Montserrat', sans-serif; 
@@ -67,16 +43,6 @@ p {
 	background-color: #F1AD1D;
 }
 
-
-.sep_aboutus {
-	display: inline-block;
-	width: 80px;
-	height: 3px;
-	margin: 2% 0% 10% 0%;
-	background-color: #333333;
-}
-
-
 /*Categorie*/
 
 .categorie-col-12 > .col-12{
@@ -87,9 +53,9 @@ p {
 	
 	position: relative;
 	display: inline-block;
-	margin: 15px 0;
-  	height: 250px;
-	width: 100%;
+	margin: 15px;
+  height: 250px;
+	width: 250px;
 
 }
 
@@ -99,7 +65,7 @@ p {
 	top: 0;
 	left:0;
 	margin:auto;
-	width: 100%;
+	width: 250px;
 	height: 250px;
 }
 
@@ -107,7 +73,7 @@ p {
 .categorie_item_info{
 	position: absolute;
 	top: 0;
-	width: 100%;
+	width: 250px;
 	height: 250px;
 	background-color: white;
 	border: solid 2px #333333;
@@ -145,10 +111,18 @@ p {
 	font-size: 14px;
 }
 
-/*Button parts */
+/*Button style */
+
+.btn {
+	border-radius: 0px;
+}
 
 .btn_itemblock{
 	margin-top: 35px;
+}
+
+.btn_books_block{
+	vertical-align: baseline;
 }
 
 .btn_item{
@@ -169,54 +143,60 @@ p {
 }
 
 
+/* cards */
 
-
-/* de Header branch*/
-
-.jumbotron
-{
-	text-align: center;
-}
-.test
-{
-	text-align: center;
+.card-border{
+	border: 1px solid #f1ad1d;
+	background-color: transparent;
 }
 
-
-
-/*About Us*/
-
-
-.aboutusphoto {
-	width: 100%;
-	border-radius: 50%;
+.card_margin{
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
-.aboutustext {
-	font-size: 1.2rem;
+.card-footer-border{
+	background-color:transparent;
+	border: none;
 }
 
-.motto {
-	 font-style: italic;
+.img_books {
+	min-width: 200px;
 }
 
-#about {
-	background-color: #f1ad1d;
+.books_card_text p{
+	position:absolute;
+	font-family:'Montserrat', sans-serif;
+	font-weight:100;
+	color: #333333;
+	top: 2%;
+	right: 4%;
+	padding: 10px 10px 10px 10px;
+	background-color: rgba(255,255,255,0.9);
+	border: 2px solid #f1ad1d;
+	border-radius:50%
 }
 
 
-
-
-/*Top Selling*/
-
-
-.newtopclass {
-	padding: 20px;
-    width: 100%;
+.card_description{
+	font-family: 'Lato', sans-serif;
+	font-size: calc(0.2vw + 12px);
+	font-weight:700;
 }
 
-.cardmarge25 {
-    margin: 25px;
+/*Modals books*/
+
+.p_descriptif_modal {
+	font-family:'Lato', sans-serif;
+	font-size: calc(0.25vw + 14px);
+	margin-top: 5%;
 }
 
+.p_caract_modal {
+	font-family:'Lato', sans-serif;
+	font-size:calc(0.15vw + 12px);
+	margin-left:2%;
+}
+
+	
 
