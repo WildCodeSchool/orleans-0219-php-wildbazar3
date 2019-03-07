@@ -4,6 +4,11 @@
 
 /*USB Keys page*/
 
+
+.container {
+	padding-top: 30px;
+}
+
 .card {
     margin-bottom: 25px;
 }
@@ -53,5 +58,6 @@
 }
 
 .usbjumbo {
-	background-image: url("usbkeyphotos/usbkeys.jpg") !important;
+	/*background-image: url("../usbkeyphotos/usbkeys.jpg");*/
+	background-color: light-grey;
 }
