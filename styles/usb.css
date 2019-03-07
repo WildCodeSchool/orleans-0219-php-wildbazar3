@@ -1,11 +1,19 @@
-
+body{
+	background-color: rgba(O,O,O,O.O5);
+}
 
 
 
 /*USB Keys page*/
 
+
+.container {
+	padding-top: 30px;
+}
+
 .card {
     margin-bottom: 25px;
+    background-color: transparent;
 }
 
 
@@ -50,4 +58,9 @@
 .btn-primary {
 	background-color: #F1AD1D;
 	border-color:  #F1AD1D;
+}
+
+.usbjumbo {
+	/*background-image: url("../usbkeyphotos/usbkeys.jpg");*/
+	background-color: light-grey;
 }

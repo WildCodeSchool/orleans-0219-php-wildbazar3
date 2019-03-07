@@ -1,16 +1,14 @@
-
+ @import url('https://fonts.googleapis.com/css?family=Lato|Montserrat'); 
 
 /*Background colors*/
 /*
 Nav and footer:
 #F1AD1D - Old WCS orange
-
 Categories and Top selling:
-
 About us:
-
 */
 
+<<<<<<< HEAD
 /* Style Navbar */
 
 .navbar
@@ -42,6 +40,15 @@ a:hover
 	{
 		color: grey;
 	}
+=======
+
+body {
+	background-color: rgba(0,0,0,0.05);
+}
+
+
+
+>>>>>>> 19307405f93e616a8ed1d3058d9314bb9c7b5f50
 /*Section padding*/
 
 section {
@@ -59,7 +66,7 @@ h1 {
 	font-family: 'Montserrat', sans-serif; 
 	font-size: 3rem; 
 	text-align: center;
-	padding: 20px 0px;
+	padding: 20px 0p#1x;
 }
 
 h2 {
@@ -91,5 +98,212 @@ p {
 	height: 3px;
 	margin: 2% 0% 10% 0%;
 	background-color: #F1AD1D;
+}
+
+
+.sep_aboutus {
+	display: inline-block;
+	width: 80px;
+	height: 3px;
+	margin: 2% 0% 10% 0%;
+	background-color: #333333;
+}
+
+
+/*Categorie*/
+
+.categorie-col-12 > .col-12{
+	flex: 0 0 50%;
+}
+
+.categorie_item{
+	
+	position: relative;
+	display: inline-block;
+	margin: 15px 0;
+  	height: 250px;
+	width: 100%;
+
+}
+
+.categorie_item img{
+	
+	position: absolute;
+	top: 0;
+	left:0;
+	margin:auto;
+	width: 100%;
+	height: 250px;
+}
+
+
+.categorie_item_info{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 250px;
+	background-color: white;
+	border: solid 2px #333333;
+	padding: 20px;
+	opacity: 0;
+	
+}
+
+.categorie_item_info:hover{
+	opacity:1;
+}
+
+
+
+.categorie_item_title{
+	font-family:'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight:700;
+	font-size: 18px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.categorie_item_sep{
+	display: inline-block;
+	width: 65px;
+	height: 3px;
+	margin: 20px 0px 15px;
+	background-color: #f1ad1d;
+}
+
+.categorie_item_p{
+	font-family:'Lato', sans-serif;
+	color: #5b5b5b;
+	font-size: 14px;
+}
+
+/*Button parts */
+
+.btn_itemblock{
+	margin-top: 35px;
+}
+
+.btn_item{
+	text-decoration: none;
+	padding: 13px 35px;
+	color: white;
+	font-size: 14px;
+	font-weight: 700;
+	background-image: none;
+	background-color: #f1ad1d;
+}
+
+.btn_item:hover{
+	color: #f1ad1d;
+	background-color: #333333;
+	text-decoration: none;
+	border: solid 1px #333333;
+}
+
+
+
+
+/* de Header branch*/
+
+.jumbotron
+{
+	text-align: center;
+}
+.test
+{
+	text-align: center;
+}
+
+
+
+/*About Us*/
+
+.aboutusphoto {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.aboutustext {
+	font-size: 1.2rem;
+}
+
+.motto {
+	 font-style: italic;
+}
+
+#about{
+	background-color: #f1ad1d;
+}
+
+
+
+
+
+/*Top Selling*/
+
+
+.newtopclass {
+	padding: 20px;
+    width: 100%;
+}
+
+.cardmarge25 {
+    margin: 25px;
+}
+
+
+
+/*footer*/
+
+footer{
+	background-color: #F1AD1D;
+}
+.categories{
+	padding-top: 1.5rem;
+}
+.categories li{
+	background-color: #F1AD1D;
+	padding: .1rem 1.25rem;
+	font-family: 'Lato', sans-serif;
+	font-size: calc(10px + 0.10vw);
+}
+.imgfooter{
+	max-width: calc(45px + 0.30vw);
+	padding-top: 0.2rem;
+}
+.h4-footer{
+	padding-top: 0.7rem;
+	font-weight: 900;
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(22px + 0.30vw);
+}
+.address{
+	font-size: 1rem;
+}
+.formheader{
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(18px + 0.30vw);
+	font-weight: 900;
+	padding-top: 1.5rem;
+}
+.btn_footer{
+	text-decoration: none;
+	margin-bottom: 1rem;
+	padding: 4px 4px;
+	color: white;
+	font-size: 14px;
+	font-weight: 900;
+	background-color: #333333;
+	color: #f1ad1d;
+}
+.btn_footer:hover{
+	background-color: #f1ad1d;
+	text-decoration: none;
+	border: 1px solid #333333;
+}
+.formlabel{
+	font-size: 1rem;
+	font-family: 'Montserrat', sans-serif;
 }
 
