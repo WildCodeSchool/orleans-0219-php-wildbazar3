@@ -3,6 +3,77 @@
 	max-width: 15vw;
 }
 
+*/
+
+
+nav
+	{
+		background-color: #F1AD1D;
+		color: white;
+	}
+
+<<<<<<< HEAD
+nav .a
+	{
+
+	}
+
+.jumbotron
+	{
+
+/*		padding: 0 0 0 0;
+		margin-bottom: 150;*/
+		background-image: url(/home/wilder/Images/hebus_1920x300_1551986548_9644.jpg);
+	}
+
+<<<<<<< HEAD
+.jumbotron h1
+
+	{
+		font-size: 50px;
+	}
+
+.lead
+	{
+		padding-bottom: 85px;
+
+	}
+
+/* Style Navbar */
+
+.navbar
+	{
+		background-color: #F1AD1D;
+
+	}
+
+#menu
+	{
+
+		float: right;
+	}
+
+/* Style Jumbotron */
+
+.jumbotron {
+		text-align: center;
+	}
+
+
+a {
+		color: white;
+		font-size: 1.5em;
+	}
+
+
+
+a:hover{
+		color: grey;
+	}
+
+
+
+
 body {
 	background-color: rgba(0,0,0,0.05)
 }
@@ -53,4 +124,97 @@ body {
 	color: #f1ad1d;
 	background-color: #333333;
 	text-decoration: none;
+}
+
+/* Styles Footer */
+
+/*footer*/
+
+footer{
+	background-color: #333333;
+	width:100%;
+	margin-top: 5%;
+}
+
+.column_footer{
+	padding-left:40px;
+	padding-right: 40px;
+}
+
+.list-group-item{
+	padding: 0 0;
+}
+
+.categories_footer{
+	padding-top: 1.5rem;
+	margin-bottom: 4%;
+}
+.categories_footer li{
+	background-color: #333333;
+	font-family: 'Lato', sans-serif;
+	font-size: calc(10px + 0.10vw);
+	color: #333333;
+}
+.imgfooter{
+	max-width: 200px;
+	padding-top: 3rem;
+}
+.h4-footer{
+	padding-top: 3rem;
+	font-weight: 700;
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(22px + 0.30vw);
+	color: #fcefd2;
+}
+.address{
+	font-size: 1rem;
+	color: #fcefd2;
+}
+.formheader{
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(18px + 0.30vw);
+	font-weight: 700;
+	padding-top: 3rem;
+	color: #fcefd2;
+
+}
+
+.btn_footer{
+	text-decoration: none;
+	margin-bottom: 1rem;
+	padding: 4px 4px;
+	color: white;
+	font-size: 14px;
+	font-weight: 900;
+	background-color: #333333;
+	color: #f1ad1d;
+	border-radius: 0px;
+}
+.btn_footer:hover{
+	background-color: #f1ad1d;
+	text-decoration: none;
+	border: 1px solid #333333;
+}
+.formlabel{
+	font-size: 1rem;
+	font-family: 'Lato', sans-serif;
+	color: #fcefd2;
+}
+
+.a_footer {
+	text-decoration: none;
+
+}
+
+li a:link, a:visited {
+  color: rgba(255,255,255,0.4);
+  padding: .3rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+li a:hover, a:active {
+  color: white;
+  padding: .1rem 0.5rem;
 }
