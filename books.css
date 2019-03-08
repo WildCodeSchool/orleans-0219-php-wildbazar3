@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
+
+
+body{
+	background-color: rgba(0,0,0,0.05);
+}
+
+h1 {
+	font-family: 'Montserrat', sans-serif; 
+	font-size: 3rem; 
+	text-align: center;
+	padding: 20px 0px;
+}
+
+h2 {
+	font-family: 'Montserrat', sans-serif; 
+	font-weight: 700;
+	font-size: 2.5rem; 
+	text-align: center;
+/*	padding: 20px 0px;*/
+	padding-top: 10%;
+/*	background-color: yellow;*/
+/*	margin-bottom: 10%;*/
+}
+
+
+p {
+	font-family: 'Lato', sans-serif; 
+}
+
+
+
+
+
+
+/*Seperator*/
+
+.sep {
+	display: inline-block;
+	width: 80px;
+	height: 3px;
+	margin: 2% 0% 10% 0%;
+	background-color: #F1AD1D;
+}
+
+/*Categorie*/
+
+.categorie-col-12 > .col-12{
+	flex: 0 0 50%;
+}
+
+.categorie_item{
+	
+	position: relative;
+	display: inline-block;
+	margin: 15px;
+  height: 250px;
+	width: 250px;
+
+}
+
+.categorie_item img{
+	
+	position: absolute;
+	top: 0;
+	left:0;
+	margin:auto;
+	width: 250px;
+	height: 250px;
+}
+
+
+.categorie_item_info{
+	position: absolute;
+	top: 0;
+	width: 250px;
+	height: 250px;
+	background-color: white;
+	border: solid 2px #333333;
+	padding: 20px;
+	opacity: 0;
+	
+}
+
+.categorie_item_info:hover{
+	opacity:1;
+}
+
+
+
+.categorie_item_title{
+	font-family:'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight:700;
+	font-size: 18px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.categorie_item_sep{
+	display: inline-block;
+	width: 65px;
+	height: 3px;
+	margin: 20px 0px 15px;
+	background-color: #f1ad1d;
+}
+
+.categorie_item_p{
+	font-family:'Lato', sans-serif;
+	color: #5b5b5b;
+	font-size: 14px;
+}
+
+/*Button style */
+
+.btn {
+	border-radius: 0px;
+}
+
+.btn_itemblock{
+	margin-top: 35px;
+}
+
+.btn_books_block{
+	vertical-align: baseline;
+}
+
+.btn_item{
+	text-decoration: none;
+	padding: 13px 35px;
+	color: white;
+	font-size: 14px;
+	font-weight: 700;
+	background-image: none;
+	background-color: #f1ad1d;
+}
+
+.btn_item:hover{
+	color: #f1ad1d;
+	background-color: #333333;
+	text-decoration: none;
+	border: solid 1px #333333;
+}
+
+
+/* cards */
+
+.card-border{
+	border: 1px solid #f1ad1d;
+	background-color: transparent;
+}
+
+.card_margin{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.card-footer-border{
+	background-color:transparent;
+	border: none;
+}
+
+.img_books {
+	min-width: 200px;
+}
+
+.books_card_text p{
+	position:absolute;
+	font-family:'Montserrat', sans-serif;
+	font-weight:100;
+	color: #333333;
+	top: 2%;
+	right: 4%;
+	padding: 10px 10px 10px 10px;
+	background-color: rgba(255,255,255,0.9);
+	border: 2px solid #f1ad1d;
+	border-radius:50%
+}
+
+
+.card_description{
+	font-family: 'Lato', sans-serif;
+	font-size: calc(0.2vw + 12px);
+	font-weight:700;
+}
+
+/*Modals books*/
+
+.p_descriptif_modal {
+	font-family:'Lato', sans-serif;
+	font-size: calc(0.25vw + 14px);
+	margin-top: 5%;
+}
+
+.p_caract_modal {
+	font-family:'Lato', sans-serif;
+	font-size:calc(0.15vw + 12px);
+	margin-left:2%;
+}
+
+	
+
