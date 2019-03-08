@@ -1,4 +1,6 @@
-
+body{
+	background-color: rgba(O,O,O,O.O5);
+}
 
 
 
@@ -11,6 +13,7 @@
 
 .card {
     margin-bottom: 25px;
+    background-color: transparent;
 }
 
 
