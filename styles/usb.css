@@ -61,6 +61,27 @@ body{
 }
 
 .usbjumbo {
-	/*background-image: url("../usbkeyphotos/usbkeys.jpg");*/
-	background-color: light-grey;
+/*	background-image: url("../usbkeyphotos/usbkeysdark.jpg");*/
+	background-color:  	#606060;
+}
+
+.whitecent {
+	color: white;
+		margin: auto;
+}
+
+/*.text-block {
+	width: 35rem;
+	background-color: rgba(0, 0, 0, 0.4);
+	margin: auto;
+}*/
+
+.orangeb {
+	background-color: #F1AD1D !important;
+	border-color: #F1AD1D !important;
+/*	color: #F1AD1D !important;*/
+}
+
+.oranget {
+	color: #F1AD1D !important;
 }
