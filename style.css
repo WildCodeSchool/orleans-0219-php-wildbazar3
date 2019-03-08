@@ -7,74 +7,7 @@ Nav and footer:
 Categories and Top selling:
 About us:
 */
-nav
-	{
-		background-color: #F1AD1D;
-		color: white;
-	}
 
-<<<<<<< HEAD
-nav .a
-	{
-
-	}
-	
-.jumbotron
-	{
-		
-		padding: 0 0 0 0;
-		margin-bottom: 150;
-		background-image: url(/home/wilder/Images/hebus_1920x300_1551986548_9644.jpg);
-	}
-
-<<<<<<< HEAD
-.jumbotron h1
-
-	{
-		font-size: 50px;
-	}
-
-.lead
-	{
-		padding-bottom: 85px;
-
-	}
-=======
-<<<<<<< HEAD
-/* Style Navbar */
-
-.navbar
-	{
-		background-color: #F1AD1D;
-	
-	}
-
-#menu
-	{
-	
-		float: right;
-	}
-
-/* Style Jumbotron */
-
-.jumbotron
-	{
-		text-align: center;
-		
-	
-	}
-a
-	{
-		color: white;
-		font-size: 1.5em;
-	}
-a:hover
-	{
-		color: grey;
-	}
-=======
-=======
->>>>>>> 68ca76e68371b6f3b91e4e016b3ea28a33983c7b
 
 nav
 	{
@@ -151,7 +84,6 @@ body {
 	background-color: rgba(0,0,0,0.06);
 }
 
->>>>>>> master
 
 
 /*Section padding*/
