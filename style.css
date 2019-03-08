@@ -10,7 +10,36 @@ Categories and Top selling:
 About us:
 
 */
+nav
+	{
+		background-color: #F1AD1D;
+		color: white;
+	}
 
+nav .a
+	{
+
+	}
+	
+.jumbotron
+	{
+		
+		padding: 0 0 0 0;
+		margin-bottom: 150;
+		background-image: url(/home/wilder/Images/hebus_1920x300_1551986548_9644.jpg);
+	}
+
+.jumbotron h1
+
+	{
+		font-size: 50px;
+	}
+
+.lead
+	{
+		padding-bottom: 85px;
+
+	}
 
 /*Section padding*/
 
