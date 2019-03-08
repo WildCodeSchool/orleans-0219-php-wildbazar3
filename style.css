@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css?family=Lato|Montserrat'); 
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat'); 
 
 /*Background colors*/
 /*
@@ -27,6 +27,7 @@ nav .a
 		background-image: url(/home/wilder/Images/hebus_1920x300_1551986548_9644.jpg);
 	}
 
+<<<<<<< HEAD
 .jumbotron h1
 
 	{
@@ -72,19 +73,20 @@ a:hover
 		color: grey;
 	}
 =======
+=======
+>>>>>>> 68ca76e68371b6f3b91e4e016b3ea28a33983c7b
 
 body {
-	background-color: rgba(0,0,0,0.05);
+	background-color: rgba(0,0,0,0.06);
 }
 
 >>>>>>> master
 
 
->>>>>>> 19307405f93e616a8ed1d3058d9314bb9c7b5f50
 /*Section padding*/
 
 section {
-	padding-bottom: 5%;
+	padding-bottom: 8%;
 }
 
 
@@ -99,6 +101,7 @@ h1 {
 	font-size: 3rem; 
 	text-align: center;
 	padding: 20px 0p#1x;
+	color: #333333;
 }
 
 h2 {
@@ -110,11 +113,13 @@ h2 {
 	padding-top: 10%;
 /*	background-color: yellow;*/
 /*	margin-bottom: 10%;*/
+	color: #333333;
 }
 
 
 p {
-	font-family: 'Lato', sans-serif; 
+	font-family: 'Lato', sans-serif;
+	color: #333333; 
 }
 
 
@@ -137,8 +142,8 @@ p {
 	display: inline-block;
 	width: 80px;
 	height: 3px;
-	margin: 2% 0% 10% 0%;
-	background-color: #333333;
+	margin: 2% 0% 4% 0%;
+	background-color: #f1ad1d;
 }
 
 
@@ -174,8 +179,8 @@ p {
 	top: 0;
 	width: 100%;
 	height: 250px;
-	background-color: white;
-	border: solid 2px #333333;
+	background-color: #f0f0f0;
+	border: solid 1px #333333;
 	padding: 20px;
 	opacity: 0;
 	
@@ -194,6 +199,7 @@ p {
 	font-size: 18px;
 	margin-top: 20px;
 	text-align: center;
+	color: #333333;
 }
 
 .categorie_item_sep{
@@ -206,7 +212,7 @@ p {
 
 .categorie_item_p{
 	font-family:'Lato', sans-serif;
-	color: #5b5b5b;
+	color: #333333;
 	font-size: 14px;
 }
 
@@ -220,7 +226,7 @@ p {
 	text-decoration: none;
 	padding: 13px 35px;
 	color: white;
-	font-size: 14px;
+	font-size: calc(0.2vw + 10px);
 	font-weight: 700;
 	background-image: none;
 	background-color: #f1ad1d;
@@ -250,14 +256,31 @@ p {
 
 
 /*About Us*/
+.border_middle {
+  border-top: 5px solid #f1ad1d;
+  border-bottom: 5px solid #f1ad1d;
+  position: relative;
+}
+.border_middle:after {
+  padding:0;margin:0;display:block;/* probably not really needed? */
+  content: "";
+  width:100%;
+  height:1.1px;/* slight higher to work around rounding errors(?) on some zoom levels in some browsers. */
+  background-color:#f1ad1d;
+  position: absolute;
+  right:0;
+  top:-1px;
+}
 
 .aboutusphoto {
-	width: 100%;
+	max-width: 350px;
 	border-radius: 50%;
 }
 
 .aboutustext {
 	font-size: 1.2rem;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 .motto {
@@ -265,7 +288,18 @@ p {
 }
 
 #about{
-	background-color: #f1ad1d;
+
+	background-color: #333333;
+}
+
+.cartouche{
+	color: #f1ad1d;
+}
+
+.about_texte{
+	color: #fcefd2;
+	margin-top: 5%;
+
 }
 
 
@@ -274,6 +308,16 @@ p {
 
 /*Top Selling*/
 
+.h3_style{
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(1vw + 14px);
+	color: #f1ad1d;
+	margin-top: -5%;
+}
+
+.card_color{
+	color:#333333;
+}
 
 .newtopclass {
 	padding: 20px;
@@ -282,6 +326,8 @@ p {
 
 .cardmarge25 {
     margin: 25px;
+    background-color: transparent;
+    border: 1px solid #f1ad1d;
 }
 
 
@@ -289,36 +335,53 @@ p {
 /*footer*/
 
 footer{
-	background-color: #F1AD1D;
+	background-color: #333333;
+	width:100%;
 }
-.categories{
+
+.column_footer{
+	padding-left:40px;
+	padding-right: 40px;
+}
+
+.list-group-item{
+	padding: 0 0;
+}
+
+.categories_footer{
 	padding-top: 1.5rem;
+	margin-bottom: 4%;
 }
-.categories li{
-	background-color: #F1AD1D;
-	padding: .1rem 1.25rem;
+.categories_footer li{
+	background-color: #333333;
 	font-family: 'Lato', sans-serif;
 	font-size: calc(10px + 0.10vw);
+	color: #333333;
 }
 .imgfooter{
-	max-width: calc(45px + 0.30vw);
-	padding-top: 0.2rem;
+	max-width: 200px;
+	padding-top: 3rem;
 }
 .h4-footer{
-	padding-top: 0.7rem;
-	font-weight: 900;
+	padding-top: 3rem;
+	font-weight: 700;
 	font-family: 'Montserrat', sans-serif;
 	font-size: calc(22px + 0.30vw);
+	color: #fcefd2;
 }
 .address{
 	font-size: 1rem;
+	color: #fcefd2;
 }
 .formheader{
 	font-family: 'Montserrat', sans-serif;
 	font-size: calc(18px + 0.30vw);
-	font-weight: 900;
-	padding-top: 1.5rem;
+	font-weight: 700;
+	padding-top: 3rem;
+	color: #fcefd2;
+
 }
+
 .btn_footer{
 	text-decoration: none;
 	margin-bottom: 1rem;
@@ -328,6 +391,7 @@ footer{
 	font-weight: 900;
 	background-color: #333333;
 	color: #f1ad1d;
+	border-radius: 0px;
 }
 .btn_footer:hover{
 	background-color: #f1ad1d;
@@ -336,6 +400,24 @@ footer{
 }
 .formlabel{
 	font-size: 1rem;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Lato', sans-serif;
+	color: #fcefd2;
 }
 
+.a_footer {
+	text-decoration: none;
+
+}
+
+li a:link, a:visited {
+  color: rgba(255,255,255,0.4);
+  padding: .3rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+li a:hover, a:active {
+  color: white;
+  padding: .1rem 0.5rem;
+}
