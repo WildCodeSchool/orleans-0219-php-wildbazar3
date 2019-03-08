@@ -24,6 +24,7 @@ body {
 .card{
 	margin-bottom: 1vw;	
 	margin-right: 12px;
+	border: 1px solid #f1ad1d;
 }
 .card{
 	width: 17rem;
