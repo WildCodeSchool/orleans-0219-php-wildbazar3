@@ -1,0 +1,89 @@
+/* Style Navbar */
+.navbar
+	{
+		position: fixed;
+		top: 0;
+		transition: top 0.3s;
+	}
+
+/* Style Jumbotron */
+
+
+
+.jumbotron
+	{
+	  	overflow: hidden;
+	  	height: 500px;
+	}
+.jumbotron h1 ,p
+	{
+		text-indent: 500px;
+	}
+
+.sliding-background 
+	{
+		background: url("/home/wilder/Documents/Projet 1/Wild_Bazar_Perso/fond_jumbotron_jouets.jpg") repeat-x;
+		height: 300px;
+		width: 3000px;
+		animation: slide 10s linear infinite;
+	}
+
+@keyframes slide
+	{
+  		10%
+  			{
+    			transform: translate3d(0, 0, 0);
+  			}
+  		60%
+  			{
+    			transform: translate3d(-500px, 0, 0);
+  			}
+	}
+	}
+/* Style Cards */
+.card-deck
+	{
+		margin-bottom: 100px;
+		display: flex;
+    	justify-content: space-around;
+	}
+
+/* Prix Article */
+.price_item 
+	{
+		position: absolute;
+		top: 8px;
+		right: 16px;
+	}
+nav
+	{
+		background-color: #F1AD1D;
+	}
+.nav .ul
+	{
+		color: black;
+	}
+.btn
+	{
+		border-radius: 0px;
+	}
+
+.btn_item
+	{
+		text-decoration: none;
+		padding: 13px 35px;
+		color: white;
+		font-size: 14px;
+		font-weight: 700;
+		background-image: none;
+		background-color: #f1ad1d;
+
+	}
+
+.btn_item:hover
+	{
+		color: #f1ad1d;
+		background-color: #333333;
+		text-decoration: none;
+		border: solid 1px #333333;
+	} 
