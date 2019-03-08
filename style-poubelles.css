@@ -2,6 +2,11 @@
 .imgfooter{
 	max-width: 15vw;
 }
+
+body {
+	background-color: rgba(0,0,0,0.05)
+}
+
 .prix{
 	font-family: Lato;
 	font-style: bold;
@@ -19,9 +24,11 @@
 .card{
 	margin-bottom: 1vw;	
 	margin-right: 12px;
+	border: 1px solid #f1ad1d;
 }
 .card{
 	width: 17rem;
+	background-color: transparent;
 }
 .card img{
 	max-width: 15rem;
