@@ -9,71 +9,6 @@ About us:
 */
 
 
-nav
-	{
-		background-color: #F1AD1D;
-		color: white;
-	}
-
-<<<<<<< HEAD
-nav .a
-	{
-
-	}
-	
-.jumbotron
-	{
-		
-/*		padding: 0 0 0 0;
-		margin-bottom: 150;*/
-		background-image: url(/home/wilder/Images/hebus_1920x300_1551986548_9644.jpg);
-	}
-
-<<<<<<< HEAD
-.jumbotron h1
-
-	{
-		font-size: 50px;
-	}
-
-.lead
-	{
-		padding-bottom: 85px;
-
-	}
-
-/* Style Navbar */
-
-.navbar
-	{
-		background-color: #F1AD1D;
-	
-	}
-
-#menu
-	{
-	
-		float: right;
-	}
-
-/* Style Jumbotron */
-
-.jumbotron {
-		text-align: center;
-	}
-
-
-a {
-		color: white;
-		font-size: 1.5em;
-	}
-
-
-
-a:hover{
-		color: grey;
-	}
-
 
 
 
@@ -103,8 +38,8 @@ h1 {
 	font-family: 'Montserrat', sans-serif; 
 	font-size: 3rem; 
 	text-align: center;
-	padding: 20px 0p#1x;
 	color: #333333;
+
 }
 
 h2 {
@@ -148,6 +83,108 @@ p {
 	margin: 2% 0% 4% 0%;
 	background-color: #f1ad1d;
 }
+
+
+/* header */
+
+nav{
+	background-color: #F1AD1D;
+	font-family: 'Lato', sans-serif;
+	color: #333333;
+	font-size: calc(0.5vw + 12px);
+	background-color: #F1AD1D;
+}
+
+.navbar{
+	position: fixed;
+	opacity: 1;
+}
+
+.navbar:hover{
+	opacity: 1;
+}
+
+.navbar a{
+	color:#333333;
+	opacity: 1;
+}
+
+.navbar-brand{
+	text-decoration: none;
+}
+
+.navbar-button {
+    background-color: transparent;
+    border: solid 1px black;
+    font-size: 14px;
+    padding: 12px 22px;
+    color: black;
+}
+
+
+
+.dropdown-menu a:link, a:visited {
+  color: #333333;
+  padding: .3rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: rgba(0,0,0,0.05)
+}
+
+.dropdown-menu a:hover, a:active {
+  color: #f1ad1d;
+  padding: .1rem 0.5rem;
+}
+
+.img_header {
+	max-width: 55px;
+}
+	
+.jumbotron{
+	text-align: center;
+	overflow: hidden;
+	background-image: url(img/shop.jpg);
+	max-height: 700px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+.jumbotron h1{
+	font-size: calc(6vw + 50px);
+	margin-top: 10%;
+	font-family: 'Montserrat', sans-serif;
+	color: #f1ad1d;
+}
+
+.lead{
+	padding-bottom: 100%;
+	color: white;
+}
+
+/* Style Navbar */
+
+.navbar{
+	position: fixed;
+	background-color: #F1AD1D;
+	opacity: 1;
+}
+
+.navbar:hover{
+	opacity: 1;
+}
+
+#menu
+	{
+	
+		float: right;
+	}
+
+
+
 
 
 /*Categorie*/
@@ -244,17 +281,6 @@ p {
 
 
 
-
-/* de Header branch*/
-
-.jumbotron
-{
-	text-align: center;
-}
-.test
-{
-	text-align: center;
-}
 
 
 
