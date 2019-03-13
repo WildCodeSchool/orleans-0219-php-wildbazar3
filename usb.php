@@ -36,29 +36,140 @@
 
       <!---------------------- Header -------------------------->
 
-      
+
             <div class="jumbotron ">
               <div class="text-block">
-    
+
 
                 <h1 class="display-1  mx-auto">USB Keys</h1>
                 <p class="lead ">On y trouve de tout et surtout du n'importe quoi !</p>
               </div>
         <!--    <button type="button" class="btn btn_item">Vendez !</button>    -->
             </div>
-            
+
 
         </header>
 
 
 
 
+       <?php $usbkeys =  array(
+
+            array(
+                "name" => "Sandisk RedDrive 1000",
+                "image" => "img/a.png",
+                "text" => "Sandisk's hot new flash drive combines speed and accuracy.",
+                "data-target" => "a",
+                "size" => "16",
+                "price" => "32",
+                "modalText" => "Cutting edge super-flash technology makes Sandisk's RedDrive 1000 one of the hottest drives on the market.",
+            ),
+           array(
+               "name" => "SP Key",
+               "image" => "img/b.png",
+               "text" => "The SP Key will hold your important data for the long run.",
+               "data-target" => "b",
+               "size" => "32",
+               "price" => "45",
+               "modalText" => "Cutting edge super-flash technology makes the SP Key one of the hottest drives on the market.",
+           ),
+           array(
+               "name" => "Samsung Arrow",
+               "image" => "img/c.png",
+               "text" => "Perfect for images or documents, Samsung has done it again.",
+               "data-target" => "c",
+               "size" => "32",
+               "price" => "52",
+               "modalText" => "Cutting edge super-flash technology makes the Samsung Arrow one of the hottest drives on the market.",
+           ),
+           array(
+               "name" => "SanDisk Button",
+               "image" => "img/d.png",
+               "text" => "So small and unimposing, you might even forget it's in your pocket!",
+               "data-target" => "d",
+               "size" => "8",
+               "price" => "19",
+               "modalText" => "Cutting edge super-flash technology makes the SanDisk Button one of the hottest drives on the market.",
+           ),
+           array(
+               "name" => "Transformer",
+               "image" => "img/e.png",
+               "text" => "From a bottle-opener to a door-stop, this little flash drive can do almost anything.",
+               "data-target" => "e",
+               "size" => "32",
+               "price" => "49",
+               "modalText" => "Cutting edge super-flash technology makes the Transformer one of the hottest drives on the market.",
+           ),
+           array(
+               "name" => "Samsung Silver",
+               "image" => "img/f.png",
+               "text" => "Luxury meets elegance in Samsung's high-end model You get what you pay for!",
+               "data-target" => "f",
+               "size" => "64",
+               "price" => "72",
+               "modalText" => "Cutting edge super-flash technology makes the Samsung Silver one of the hottest drives on the market.",
+           ),
+           array(
+               "name" => "Thetis Key",
+               "image" => "img/g.png",
+               "text" => "The flagship drive from upcoming Greek manufacturer Thetis. Now Fido certified.",
+               "data-target" => "g",
+               "size" => "32",
+               "price" => "64",
+               "modalText" => "Cutting edge super-flash technology makes the Thetis Key one of the hottest drives on the market.",
+           ),
+           array(
+               "name" => "PNY Gadget",
+               "image" => "img/h.png",
+               "text" => "Designed from Leonardo da Vinci's sketches, the Gadget is a true work of art.",
+               "data-target" => "h",
+               "size" => "32",
+               "price" => "45",
+               "modalText" => "Cutting edge super-flash technology makes the PNY Gadget one of the hottest drives on the market.",
+           ),
+           array(
+               "name" => "iLOK Performer",
+               "image" => "img/i.png",
+               "text" => "The iLOK Performer locks your data so even you can't get to it!",
+               "data-target" => "i",
+               "size" => "16",
+               "price" => "40",
+               "modalText" => "Cutting edge super-flash technology makes the iLOK Performer one of the hottest drives on the market.",
+           ),
+           array(
+               "name" => "Corsair Voyager Vega",
+               "image" => "img/j.png",
+               "text" => "The preferred flash drive of corsairs for over 5 centuries.",
+               "data-target" => "j",
+               "size" => "24",
+               "price" => "86",
+               "modalText" => "Cutting edge super-flash technology makes the Corsair Voyager Vega one of the hottest drives on the market.",
+           ),
+           array(
+               "name" => "Samsung Little Boy",
+               "image" => "img/k.png",
+               "text" => "Don't let the size fool you! The Little Boy has the power of an adult!",
+               "data-target" => "k",
+               "size" => "128",
+               "price" => "119",
+               "modalText" => "Cutting edge super-flash technology makes the Little Boy one of the hottest drives on the market.",
+           ),
+           array(
+               "name" => "Corsair GS",
+               "image" => "img/l.png",
+               "text" => "Waterproof, weatherproof, fireproof... everything but childproof!",
+               "data-target" => "l",
+               "size" => "8",
+               "price" => "12",
+               "modalText" => "Cutting edge super-flash technology makes the Corsair GS one of the hottest drives on the market.",
+           )
+
+        );
 
 
 
 
-
-
+        ?>
 
 
 
@@ -70,188 +181,17 @@
 
 
 
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="card">
-                <img src="img/a.png" class="card-img-top" alt="Photo of USB key">
-                <div class="card-body">
-                  <h5 class="card-title">Sandisk RedDrive 1000</h5>
-                  <p class="card-text">Sandisk's hot new flash drive combines speed and accuracy.</p>
-                  <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#a">
-              Details
-            </button>
-                </div>
-              </div>
-            </div>
+              <?php foreach($usbkeys as $usbkey) {
+                  $image = $usbkey["image"] ;
+                  $name = $usbkey["name"] ;
+                  $text = $usbkey['text'] ;
+                  $target = $usbkey['data-target'] ;
 
+                  include 'usbproductcard.php';
+                  }
 
-            
+                ?>
 
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="card">
-                <img src="img/b.png" class="card-img-top" alt="Photo of USB key">
-                <div class="card-body">
-                  <h5 class="card-title">SP Key</h5>
-                  <p class="card-text">The SP Key will hold your important data for the long run.</p>
-                  <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#b">Details</button> 
-                </div>
-              </div>
-            </div>
-
-
-            
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="card">
-                <img src="img/c.png" class="card-img-top" alt="Photo of USB key">
-                <div class="card-body">
-                  <h5 class="card-title">Samsung Arrow</h5>
-                  <p class="card-text">Perfect for images or documents, Samsung has done it again.</p>
-                  <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#c">Details</button>
-                </div>
-              </div>
-            </div>
-
-
-            
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="card">
-                <img src="img/d.png" class="card-img-top" alt="Photo of USB key">
-                <div class="card-body">
-                  <h5 class="card-title">SanDisk Button</h5>
-                  <p class="card-text">So small and unimposing, you might even forget it's in your pocket!</p>
-                  <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#d">Details</button>
-                </div>
-              </div>
-            </div>
-
-
-            
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="card">
-                <img src="img/e.png" class="card-img-top" alt="Photo of USB key">
-                <div class="card-body">
-                  <h5 class="card-title">Transformer</h5>
-                  <p class="card-text">From a bottle-opener to a door-stop, this little flash drive can do almost anything.</p>
-                  <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#e">Details</button>
-                </div>
-              </div>
-            </div>
-
-
-            
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="card">
-                <img src="img/f.png" class="card-img-top" alt="Photo of USB key">
-                <div class="card-body">
-                  <h5 class="card-title">Samsung Silver</h5>
-                  <p class="card-text">Luxury meets elegance in Samsung's high-end model You get what you pay for!</p>
-                  <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#f">Details</button>
-                </div>
-              </div>
-            </div>
-
-
-            
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="card">
-                <img src="img/g.png" class="card-img-top" alt="Photo of USB key">
-                <div class="card-body">
-                  <h5 class="card-title">Thetis Key</h5>
-                  <p class="card-text">The flagship drive from upcoming Greek manufacturer Thetis. Now Fido certified.</p>
-                  <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#g">Details</button>
-                </div>
-              </div>
-            </div>
-
-
-            
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="card">
-                <img src="img/h.png" class="card-img-top" alt="Photo of USB key">
-                <div class="card-body">
-                  <h5 class="card-title">PNY Gadget</h5>
-                  <p class="card-text">Designed from Leonardo da Vinci's sketches, the Gadget is a true work of art..</p>
-                  <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#h">Details</button>
-                </div>
-              </div>
-            </div>
-
-
-            
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="card">
-                <img src="img/i.png" class="card-img-top" alt="Photo of USB key">
-                <div class="card-body">
-                  <h5 class="card-title">iLOK Performer</h5>
-                  <p class="card-text">The iLOK Performer locks your data so even you can't get to it!</p>
-                  <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#i">Details</button>
-                </div>
-              </div>
-            </div>
-
-
-            
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="card">
-                <img src="img/j.png" class="card-img-top" alt="Photo of USB key">
-                <div class="card-body">
-                  <h5 class="card-title">Corsair Voyager Vega</h5>
-                  <p class="card-text">The preferred flash drive of corsairs for over 5 centuries.</p>
-                  <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#j">Details</button>
-                </div>
-              </div>
-            </div>
-
-
-
-            
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="card">
-                <img src="img/k.png" class="card-img-top" alt="Photo of USB key">
-                <div class="card-body">
-                  <h5 class="card-title">Samsung Little Boy</h5>
-                  <p class="card-text">Don't let the size fool you! The Little Boy has the power of an adult!</p>
-                  <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#k">Details</button>
-                </div>
-              </div>
-            </div>
-
-            
-
-            
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="card">
-                <img src="img/l.png" class="card-img-top" alt="Photo of USB key">
-                <div class="card-body">
-                  <h5 class="card-title">Corsair GS</h5>
-                  <p class="card-text">Waterproof, weatherproof, fireproof... everything but childproof!</p>
-                  <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#l">Details</button>
-                </div>
-              </div>
-            </div>
-
-            
 
 
 
@@ -281,6 +221,11 @@
        <!-- Modals -->
 
        <div>
+            <?php
+
+
+            ?>
+
 
             <!-- Modal -->
             <div class="modal fade" id="a" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -311,7 +256,7 @@
                     </div>
                   </div>
 
-                  
+
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Add to cart</button>
@@ -351,7 +296,7 @@
                     </div>
                   </div>
 
-                  
+
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Add to cart</button>
@@ -391,7 +336,7 @@
                     </div>
                   </div>
 
-                  
+
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Add to cart</button>
@@ -429,7 +374,7 @@
                     </div>
                   </div>
 
-                  
+
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Add to cart</button>
@@ -467,7 +412,7 @@
                     </div>
                   </div>
 
-                  
+
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Add to cart</button>
@@ -505,7 +450,7 @@
                     </div>
                   </div>
 
-                  
+
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Add to cart</button>
@@ -543,7 +488,7 @@
                     </div>
                   </div>
 
-                  
+
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Add to cart</button>
@@ -584,7 +529,7 @@
                     </div>
                   </div>
 
-                  
+
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Add to cart</button>
@@ -625,7 +570,7 @@
                     </div>
                   </div>
 
-                  
+
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Add to cart</button>
@@ -663,7 +608,7 @@
                     </div>
                   </div>
 
-                  
+
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Add to cart</button>
@@ -701,7 +646,7 @@
                     </div>
                   </div>
 
-                  
+
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Add to cart</button>
@@ -739,7 +684,7 @@
                     </div>
                   </div>
 
-                  
+
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Add to cart</button>
@@ -748,7 +693,7 @@
                 </div>
               </div>
             </div>
-         
+
        </div>
 
 
@@ -764,13 +709,13 @@
 
   <!--Start of footer-->
   <footer id="contact">
-    
+
     <div class="container">
       <div class="row">
 
         <!--Start of left column-->
         <div class="col-12 col-sm-6">
-          
+
 
           <div class="row text-center"> <!--Start of row #2 of left column-->
             <div class="col">
@@ -779,11 +724,11 @@
             <div class="col">
               <h4 class="h4-footer">WILD&nbsp;BAZAR</h4>
               <p class="address">1, rue de la paix<br>75000 Paris<br>+33&nbsp;(0)1&nbsp;23&nbsp;45&nbsp;67&nbsp;89</p>
-            </div> 
+            </div>
           </div> <!--end of row #2 of left column-->
 
           <div class="row categories_footer"> <!--Start of row #1 of left column-->
-           <div class="col"> 
+           <div class="col">
             <ul class="list-group">
               <li class="list-group-item border-0">
                 <a href="#" class="a_footer">Home</a>
@@ -819,7 +764,7 @@
             </ul>
           </div>
           </div> <!--End of row #1 of left column-->
-       
+
         </div>
         <!--end of left column-->
 
