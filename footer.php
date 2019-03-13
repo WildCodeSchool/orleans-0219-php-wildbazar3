@@ -79,7 +79,7 @@
                 <a href="poubelle.html" class="a_footer">Poubelles</a>
               </li>
               <li class="list-group-item border-0">
-                <a href="usb.html" class="a_footer">Clés USB</a>
+                <a href="usb.php" class="a_footer">Clés USB</a>
               </li>
             </ul>
           </div>

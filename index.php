@@ -53,7 +53,7 @@
                     <a class="dropdown-item a_header" href="books.html">Books</a>
                     <a class="dropdown-item a_header" href="jouets.html">Jouets</a>
                     <a class="dropdown-item a_header" href="poubelles.html">Poubelles</a>
-                    <a class="dropdown-item a_header" href="usb.html">Clefs USB</a>
+                    <a class="dropdown-item a_header" href="usb.php">Clefs USB</a>
                   </div>
                 </li>
                 <li class="nav-item">
@@ -159,7 +159,7 @@
                       <i class="categorie_item_sep"></i>
                       <div class="categorie_item_p">Du stockage pour tous les goûts et toutes les couleurs.</div>
                       <div class="btn_itemblock">
-                <a href="usb.html" class="btn_item">En savoir plus</a>
+                <a href="usb.php" class="btn_item">En savoir plus</a>
               </div>
                   </div>
                 </div>
@@ -317,7 +317,7 @@
                 <a href="poubelle.html" class="a_footer">Poubelles</a>
               </li>
               <li class="list-group-item border-0">
-                <a href="usb.html" class="a_footer">Clés USB</a>
+                <a href="usb.php" class="a_footer">Clés USB</a>
               </li>
             </ul>
           </div>
