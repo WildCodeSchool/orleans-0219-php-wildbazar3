@@ -27,13 +27,13 @@
 
 
           
-        <nav class="navbar navbar-expand-lg navbar-light sticky-top w-100">
+        <nav class="navbar navbar-expand-lg w-100">
             
           <a class="navbar-brand" href="#">
             <img class="img_header" src="img/logo_wb.png">&nbsp;</a>
 
         
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
             <span class="navbar-toggler-icon"></span>
 
@@ -68,15 +68,15 @@
 
 
 
-  /*  <!--
+    <!--
         <div class="jumbotron w-100">
           <h1 class="display-1 mx-auto">WILD BAZAR</h1>
           <p class="lead">On y trouve de tout et surtout du n'importe quoi !</p>
              </div>
-    <!--  <button type="button" class="btn btn_item">Vendez !</button>    -->
+     <button type="button" class="btn btn_item">Vendez !</button>    -->
 
 
-    -->  */
+  
 
 
 
