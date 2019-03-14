@@ -9,6 +9,12 @@ About us:
 */
 
 
+
+
+
+
+
+
 body {
 	background-color: rgba(0,0,0,0.06);
 }
@@ -32,8 +38,8 @@ h1 {
 	font-family: 'Montserrat', sans-serif; 
 	font-size: 3rem; 
 	text-align: center;
-	padding: 20px 0p#1x;
 	color: #333333;
+
 }
 
 h2 {
@@ -76,6 +82,96 @@ p {
 	height: 3px;
 	margin: 2% 0% 4% 0%;
 	background-color: #f1ad1d;
+}
+
+
+/* header */
+
+nav{
+	font-family: 'Lato', sans-serif;
+	color: #505050;
+	font-size: calc(0.5vw + 12px);
+	background-color: #F1AD1D;
+}
+
+.navbar{
+	position: fixed;
+	opacity:0.2;
+}
+
+.navbar:hover{
+	opacity: 1;
+}
+
+.navbar-brand{
+	text-decoration: none;
+}
+
+.navbar-toggler {
+    background-color: transparent;
+    border: solid 1px #505050;
+    font-size: 18px;
+    padding: 12px 22px;
+    color: #505050;
+}
+
+.dropdown-menu {
+	padding: 20px 200px 20px 20px;
+	margin-top: 0.5rem;
+	background-color: #505050;
+	border: #F1AD1D;
+	border-radius: 0px;
+}
+
+.a_header{
+	margin: 0px 10px;
+	color: #505050;
+}
+
+.nav-link:hover, .nav-link:active {
+	color: #f1ad1d !important;
+	background-color: #505050;
+	border-radius: 30px;
+}
+
+.dropdown-menu .a_header:link, .a_header:visited {
+  color: #f1ad1d;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #505050;
+}
+
+.dropdown-menu .a_header:hover, .a_header:active {
+  color: #505050;
+  background-color: #f1ad1d;
+}
+
+.img_header {
+	max-width: 55px;
+}
+	
+.jumbotron{
+	text-align: center;
+	overflow: hidden;
+	background-image: url(img/shop.jpg);
+	max-height: 700px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+.jumbotron h1{
+	font-size: calc(6vw + 50px);
+	margin-top: 10%;
+	font-family: 'Montserrat', sans-serif;
+	color: #f1ad1d;
+}
+
+.lead{
+	padding-bottom: 100%;
+	color: white;
 }
 
 
@@ -174,17 +270,6 @@ p {
 
 
 
-/* de Header branch*/
-
-.jumbotron
-{
-	text-align: center;
-}
-.test
-{
-	text-align: center;
-}
-
 
 
 /*About Us*/
@@ -267,7 +352,7 @@ p {
 /*footer*/
 
 footer{
-	background-color: #333333;
+	background-color: #505050;
 	width:100%;
 }
 
@@ -285,17 +370,17 @@ footer{
 	margin-bottom: 4%;
 }
 .categories_footer li{
-	background-color: #333333;
+	background-color: #505050;
 	font-family: 'Lato', sans-serif;
-	font-size: calc(10px + 0.10vw);
-	color: #333333;
+	font-size: calc(10px + 0.15vw);
+	color: #505050;
 }
 .imgfooter{
 	max-width: 200px;
 	padding-top: 3rem;
 }
 .h4-footer{
-	padding-top: 3rem;
+	margin-top: 3rem;
 	font-weight: 700;
 	font-family: 'Montserrat', sans-serif;
 	font-size: calc(22px + 0.30vw);
@@ -305,12 +390,15 @@ footer{
 	font-size: 1rem;
 	color: #fcefd2;
 }
-.formheader{
+.form_title{
 	font-family: 'Montserrat', sans-serif;
-	font-size: calc(18px + 0.30vw);
+	font-size: calc(20px + 0.4vw);
 	font-weight: 700;
-	padding-top: 3rem;
-	color: #fcefd2;
+	margin-top: 3rem;
+	margin-bottom: 1.5rem;
+	color: #505050;
+	padding: 10px 20px;
+	background-color: #f1ad1d;
 
 }
 
@@ -318,17 +406,17 @@ footer{
 	text-decoration: none;
 	margin-bottom: 1rem;
 	padding: 4px 4px;
-	color: white;
 	font-size: 14px;
 	font-weight: 900;
-	background-color: #333333;
+	background-color: #505050;
 	color: #f1ad1d;
 	border-radius: 0px;
+	border: 1px solid #f1ad1d;
 }
 .btn_footer:hover{
 	background-color: #f1ad1d;
 	text-decoration: none;
-	border: 1px solid #333333;
+	border: 1px solid #505050;
 }
 .formlabel{
 	font-size: 1rem;
@@ -336,13 +424,20 @@ footer{
 	color: #fcefd2;
 }
 
+.form-control{
+	font-size: 0.7rem;
+	font-family: 'Lato', sans-serif;
+	color: rgba(255,255,255,0.4);
+}
+
 .a_footer {
 	text-decoration: none;
 
 }
 
+
 li a:link, a:visited {
-  color: rgba(255,255,255,0.4);
+  color: #e0e0e0;
   padding: .3rem 1.25rem;
   text-align: center;
   text-decoration: none;
@@ -350,6 +445,6 @@ li a:link, a:visited {
 }
 
 li a:hover, a:active {
-  color: white;
-  padding: .1rem 0.5rem;
+  color: #f1ad1d;
+  padding: .3rem 1.25rem;
 }
