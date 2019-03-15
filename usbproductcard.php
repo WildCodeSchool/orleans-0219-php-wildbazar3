@@ -6,7 +6,7 @@
                   <h5 class="card-title"><?php echo $name ?></h5>
                   <p class="card-text"><?php echo $text ?></p>
                   <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="<?php echo '#'.$target ?>">
+                  <button type="button" class="btn btn-primary down" data-toggle="modal" data-target="<?php echo '#'.$target ?>">
               Details
             </button>
                 </div>

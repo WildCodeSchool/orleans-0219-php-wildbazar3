@@ -14,7 +14,10 @@ body{
 .card {
     margin-bottom: 25px;
     background-color: transparent;
+	height: 95%;
 }
+
+
 
 
 .paginationbar {
