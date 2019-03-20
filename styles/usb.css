@@ -89,3 +89,20 @@ body{
 .oranget {
 	color: #F1AD1D !important;
 }
+
+#formulaire {
+	width: 70%;
+	margin: auto;
+}
+
+.radioUSB {
+	margin-left: 2rem;
+}
+
+.send-button {
+	float: right;
+}
+
+.pushright {
+	margin-left: 1rem;
+}
