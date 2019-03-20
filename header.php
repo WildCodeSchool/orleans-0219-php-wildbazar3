@@ -67,19 +67,6 @@
         </nav>
 
 
-
-  /*  <!--
-        <div class="jumbotron w-100">
-          <h1 class="display-1 mx-auto">WILD BAZAR</h1>
-          <p class="lead">On y trouve de tout et surtout du n'importe quoi !</p>
-             </div>
-    <!--  <button type="button" class="btn btn_item">Vendez !</button>    -->
-
-
-    -->  */
-
-
-
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
