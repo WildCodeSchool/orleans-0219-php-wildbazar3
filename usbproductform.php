@@ -112,17 +112,25 @@ if (isset($_POST) && !empty($_POST)) {
                        value="<?= $_POST['name'] ?? "" ?>">
                 <small class="text-danger font-weight-bold"><?= $errors['name'] ?? "" ?></small>
             </div>
+
             <div class="form-group">
-                <label for="Description">Description</label>
-                <input type="text" class="form-control" id="description" name="description" required minlength="20" maxlength="255"
-                       value="<?= $_POST['description'] ?? "" ?>">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" class="form-control" rows="4" cols="25" required minlength="20" maxlength="255"  placeholder="A brief description of the product..."><?= $_POST['description'] ?? "" ?></textarea>
                 <small class="text-danger font-weight-bold"><?= $errors['description'] ?? "" ?></small>
             </div>
-            <div class="form-group">
 
+
+
+<!--            <div class="form-group">
+                <label for="Description">Description</label>
+                <input type="text" class="form-control" id="description" name="description" required minlength="20" maxlength="255"
+                       value="<?/*= $_POST['description'] ?? "" */?>">
+                <small class="text-danger font-weight-bold"><?/*= $errors['description'] ?? "" */?></small>
+            </div>-->
+
+            <div class="form-group">
                 <label for="size">Size</label>
-                <input class="radioUSB" type="radio" name="size" value="8" checked> 8 GB
-                <input class="radioUSB" type="radio" name="size" value="16"> 16 GB
+                <input class="radioUSB" type="radio" name="size" value="16" checked> 16 GB
                 <input class="radioUSB" type="radio" name="size" value="32"> 32 GB
                 <input class="radioUSB" type="radio" name="size" value="64"> 64 GB
                 <input class="radioUSB" type="radio" name="size" value="128"> 128 GB
