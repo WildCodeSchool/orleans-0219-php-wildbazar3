@@ -30,44 +30,7 @@
     <header>
 
           
-        <nav class="navbar navbar-expand-lg navbar-light sticky-top w-100">
-            
-          <a class="navbar-brand" href="#">
-            <img class="img_header" src="img/logo_wb.png">&nbsp;</a>
-
-        
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-            <span class="navbar-toggler-icon"></span>
-
-          </button>
-        
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle a_header" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Catégorie
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item a_header" href="books.html">Books</a>
-                    <a class="dropdown-item a_header" href="jouets.html">Jouets</a>
-                    <a class="dropdown-item a_header" href="poubelles.html">Poubelles</a>
-                    <a class="dropdown-item a_header" href="usb.html">Clefs USB</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link a_header" href="#about">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link a_header" href="#topselling">Top selling</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link a_header" href="#contact">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-        </nav>
+       <?php include'header.php' ?>
 
 
         <div class="jumbotron w-100">
@@ -265,91 +228,7 @@
     </section>
 
 
-  <!--Start of footer-->
-  <footer id="contact">
-    
-    <div class="container">
-      <div class="row">
-
-        <!--Start of left column-->
-        <div class="col-12 col-sm-6">
-          
-
-          <div class="row text-center"> <!--Start of row #2 of left column-->
-            <div class="col">
-              <img class="imgfooter" src="img/logo_wb.png" alt="Wild Bazar Logo">
-            </div>
-            <div class="col">
-              <h4 class="h4-footer">WILD&nbsp;BAZAR</h4>
-              <p class="address">1, rue de la paix<br>75000 Paris<br>+33&nbsp;(0)1&nbsp;23&nbsp;45&nbsp;67&nbsp;89</p>
-            </div> 
-          </div> <!--end of row #2 of left column-->
-
-          <div class="row categories_footer"> <!--Start of row #1 of left column-->
-           <div class="col"> 
-            <ul class="list-group">
-              <li class="list-group-item border-0">
-                <a href="#" class="a_footer">Home</a>
-              </li>
-              <li class="list-group-item border-0">
-                <a href="about" class="a_footer">About us</a>
-              </li>
-              <li class="list-group-item border-0">
-                <a href="topselling" class="a_footer">Top Selling</a>
-              </li>
-              <li class="list-group-item border-0">
-                <a href="contact" class="a_footer">Contact</a>
-              </li>
-              <li class="list-group-item border-0">
-                <a href="#" class="a_footer">Legal mentions</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul class="list-group">
-              <li class="list-group-item border-0">
-                <a href="books.html" class="a_footer">Livres</a>
-              </li>
-              <li class="list-group-item border-0">
-                <a href="toys.html" class="a_footer">Jouets</a>
-              </li>
-              <li class="list-group-item border-0">
-                <a href="poubelle.html" class="a_footer">Poubelles</a>
-              </li>
-              <li class="list-group-item border-0">
-                <a href="usb.html" class="a_footer">Clés USB</a>
-              </li>
-            </ul>
-          </div>
-          </div> <!--End of row #1 of left column-->
-       
-        </div>
-        <!--end of left column-->
-
-        <!--Start of right column-->
-        <div class="col-12 col-sm-6">
-          <!--Start of Contact form-->
-          <h6 class="formheader">Contact us</h6>
-          <form>
-            <div class="form-group formlabel">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="@">
-            </div>
-            <div class="form-group formlabel">
-              <label for="text">Message</label>
-              <textarea class="form-control" id="text" rows="3" placeholder="Your message"></textarea>
-            </div>
-            <div class="submitbutton col-4 offset-5">
-              <button type="button" class="btn btn_footer">Submit</button>
-            </div>
-          </form>
-        </div>
-        <!--End of Contact form-->
-      <!--End of right column-->
-      </div>
-    </div>
-  </footer>
-  <!--End of footer-->
+    <?php include 'footer.php' ?>
 
 
 
