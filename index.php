@@ -30,7 +30,9 @@
     <header>
 
           
+
        <?php include'header.php' ?>
+
 
 
         <div class="jumbotron w-100">
@@ -122,7 +124,7 @@
                       <i class="categorie_item_sep"></i>
                       <div class="categorie_item_p">Du stockage pour tous les goûts et toutes les couleurs.</div>
                       <div class="btn_itemblock">
-                <a href="usb.html" class="btn_item">En savoir plus</a>
+                <a href="usb.php" class="btn_item">En savoir plus</a>
               </div>
                   </div>
                 </div>
@@ -226,6 +228,7 @@
           </div>
         </div>
     </section>
+
 
 
     <?php include 'footer.php' ?>
