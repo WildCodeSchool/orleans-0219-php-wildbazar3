@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="form.css">
     <title>Ajouter un produit</title>
 </head>
 
@@ -62,7 +63,11 @@ if ($_POST) {
 
 
 ?>
+
+<h2>Ajouter un produit</h2>
+
 <!--start of form -->
+
 <form action="" method="post">
 
     <div>
@@ -79,25 +84,25 @@ if ($_POST) {
 
     <div>
         <label for="image">Image du produit :</label>
-        <input type="text" id="image" name="image"><!--required removed so we can test the server side-->
+        <input type="url" id="image" name="image" placeholder="URL de l'image"><!--required removed so we can test the server side-->
         <p><?php if (isset($errors['image1'])) echo $errors['image1']; ?></p>
     </div>
 
     <div>
         <label for="hauteur">Hauteur :</label>
-        <input type="text" id="hauteur" name="hauteur"><!--required removed so we can test the server side-->
+        <input type="text" id="hauteur" name="hauteur" placeholder="en centimètres"><!--required removed so we can test the server side-->
         <p><?php if (isset($errors['hauteur1'])) echo $errors['hauteur1']; ?></p>
     </div>
 
     <div>
         <label for="largeur">Largeur :</label>
-        <input type="text" id="largeur" name="largeur"><!--required removed so we can test the server side-->
+        <input type="text" id="largeur" name="largeur" placeholder="en centimètres"><!--required removed so we can test the server side-->
         <p><?php if (isset($errors['largeur1'])) echo $errors['largeur1']; ?></p>
     </div>
 
     <div>
         <label for="poids">Poids :</label>
-        <input type="text" id="poids" name="poids"><!--required removed so we can test the server side-->
+        <input type="text" id="poids" name="poids" placeholder="en kilos"><!--required removed so we can test the server side-->
         <p><?php if (isset($errors['poids1'])) echo $errors['poids1']; ?></p>
     </div>
 
