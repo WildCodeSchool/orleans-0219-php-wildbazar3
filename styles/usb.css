@@ -14,7 +14,10 @@ body{
 .card {
     margin-bottom: 25px;
     background-color: transparent;
+	height: 95%;
 }
+
+
 
 
 .paginationbar {
@@ -85,4 +88,41 @@ body{
 
 .oranget {
 	color: #F1AD1D !important;
+}
+
+#formulaire {
+	width: 70%;
+	max-width: 800px;
+	margin: auto;
+}
+
+.radioUSB {
+	margin-left: 2rem;
+}
+
+.send-button {
+	float: right;
+}
+
+.pushright {
+	margin-left: 1rem;
+}
+
+.ajout {
+	margin-right: 2rem;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+.form-control{
+	font-size: 1rem;
+	font-family: 'Lato', sans-serif;
+	color: rgba(0,0,0,1);
 }
