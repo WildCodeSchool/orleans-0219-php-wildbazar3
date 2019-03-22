@@ -97,7 +97,7 @@ nav{
 
 .navbar{
 	position: fixed;
-	opacity:0.2;
+	opacity:0.5;
 }
 
 .navbar:hover{
@@ -149,6 +149,7 @@ nav{
 
 .img_header {
 	max-width: 55px;
+	opacity: 1;
 }
 	
 .jumbotron{
@@ -253,6 +254,10 @@ nav{
 }
 
 /*Button parts */
+
+.btn_itemblock2{
+	margin-top: 35px;
+}
 
 .btn_itemblock{
 	margin-top: 60px;

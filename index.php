@@ -81,7 +81,7 @@
                     <div class="categorie_item_title">books</div>
                       <i class="categorie_item_sep"></i>
                       <div class="categorie_item_p">To see all our magnificent books ! And even more...</div>
-                      <div class="btn_itemblock">
+                      <div class="btn_itemblock2">
                 <a href="books.php" class="btn_item">To learn more</a>
               </div>
                   </div>
@@ -95,7 +95,7 @@
                     <div class="categorie_item_title">Toys</div>
                       <i class="categorie_item_sep"></i>
                       <div class="categorie_item_p">Thousands of toys ! And even more...</div>
-                      <div class="btn_itemblock">
+                      <div class="btn_itemblock2">
                 <a href="jouets.php" class="btn_item">To learn more</a>
               </div>
                   </div>
@@ -109,7 +109,7 @@
                     <div class="categorie_item_title">Trash bins</div>
                       <i class="categorie_item_sep"></i>
                       <div class="categorie_item_p">Something to throw away ? We got it !</div>
-                      <div class="btn_itemblock">
+                      <div class="btn_itemblock2">
                 <a href="poubelles.php" class="btn_item">To learn more</a>
               </div>
                   </div>
@@ -123,7 +123,7 @@
                     <div class="categorie_item_title">USB keys</div>
                       <i class="categorie_item_sep"></i>
                       <div class="categorie_item_p">Storage for all the tastes ! And even more...</div>
-                      <div class="btn_itemblock">
+                      <div class="btn_itemblock2">
                 <a href="usb.php" class="btn_item">To learn more</a>
               </div>
                   </div>

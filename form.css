@@ -51,7 +51,7 @@ nav{
 
 .navbar{
     position: fixed;
-    opacity:0.2;
+    opacity:0.5;
 }
 
 .navbar:hover{
