@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
+
+body {
+    background-color: rgba(0,0,0,0.06);
+}
+
+section {
+    padding-bottom: 8%;
+}
+
+div{
+    font-family:'Lato', sans-serif;
+    color: #505050;
+    font-size: calc(0.5vw + 10px);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    color: #333333;
+
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    /*	padding: 20px 0px;*/
+    padding-top: 10%;
+    /*	background-color: yellow;*/
+    /*	margin-bottom: 10%;*/
+    color: #333333;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    color: #333333;
+}
+
+
+/*Separator*/
+
+.sep {
+    display: inline-block;
+    width: 80px;
+    height: 3px;
+    margin: 2% 0 10% 0;
+    background-color: #F1AD1D;
+}
+
+
+.sep_aboutus {
+    display: inline-block;
+    width: 80px;
+    height: 3px;
+    margin: 2% 0 4% 0;
+    background-color: #f1ad1d;
+}
+
+
+/* Jumbotron */
+
+.jumbotron{
+    text-align: center;
+    overflow: hidden;
+    background-image: url(img/shop.jpg);
+    max-height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.jumbotron h1{
+    font-size: calc(6vw + 50px);
+    margin-top: 10%;
+    font-family: 'Montserrat', sans-serif;
+    color: #f1ad1d;
+}
+
+.lead{
+    padding-bottom: 100%;
+    color: white;
+}
+
+/* Bouton */
+
+
+.btn{
+    border-radius: 0;
+}
+
+.btn_itemblock{
+    margin-top: 35px;
+}
+
+.btn_item{
+    text-decoration: none;
+    padding: 13px 35px;
+    color: white;
+    font-size: calc(0.2vw + 10px);
+    font-weight: 700;
+    background-image: none;
+    background-color: #f1ad1d;
+}
+
+.btn_item:hover{
+    color: #f1ad1d;
+    background-color: #333333;
+    text-decoration: none;
+    border: solid 1px #333333;
+}
+
+
+/* formulaire */
+
+.form-control{
+    font-size: calc(0.3vw + 10px);
+    font-family: 'Lato', sans-serif;
+    color: #505050;
+}
+
+.form-group{
+    width:100%;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
