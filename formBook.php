@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="style.css">
+
 
 
     <title>Wild Bazar / Books</title>
@@ -113,7 +113,7 @@
 
         ?>
 
-        <form method="POST" action="">
+        <form id="formbook" method="POST" action="formBook.php">
             <div class="row">
                 <div class="form-group col-sm-12 col-md-6">
                     <label for="titre">Titre de l'ouvrage :</label>
@@ -161,13 +161,13 @@
 
                 <div class="form-group col col-sm-6 col-md-3">
                     <label for="shaping">Façonnage :</label>
-                    <select id="shaping" class="form-control" required>
+                    <select id="shaping" name="shaping" class="form-control" required>
                         <option value="">-- Choisissez un façonnage --</option>
-                        <?php foreach ($shapings as $shape) { ?>
-                            <option value="<?= strtolower($shape); ?>">
+                        <?php foreach ($shapings as $shape) : ?>
+                            <option value="<?= strtolower($shape); ?>" selected>
                                 <?= $shape; ?>
                             </option>
-                        <?php } ?>
+                        <?php endforeach; ?>
                     </select>
 
                 </div>
