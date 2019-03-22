@@ -66,6 +66,7 @@ if (isset($_POST) && !empty($_POST)) {
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="styles/usb.css" />
+    <link rel="stylesheet" href="form.css" />
 
     <title>USB keys</title>
 </head>
