@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="form.css">
 
 
-
     <title>Wild Bazar / Books</title>
 </head>
 
@@ -36,26 +35,30 @@
 
 
 <section id="books">
-    <div class="row"><!-- Ouverture Row Catégorie -->
-        <div class="col text-center">
-            <h2>AJOUT DE LIVRES</h2>
-            <div class="sep"></div>
-        </div>
-    </div><!--Fermeture Row Titre-->
-
+    <div class="container">
+        <div class="row"><!-- Ouverture Row Catégorie -->
+            <div class="col text-center">
+                <h2>AJOUT DE LIVRES</h2>
+                <div class="sep"></div>
+            </div>
+        </div><!--Fermeture Row Titre-->
+    </div>
     <div class="container">
 
 
         <!-- ================== Début formulaire d'ajout ================== -->
 
         <?php
-        if ($_POST) {
 
-            print_r($_POST);
+        require 'src/function.php';
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            $data = cleanData($_POST);
+
 
             $errors = [];
 
-            print_r($errors);
 
             // Validation part
 
@@ -117,54 +120,55 @@
             <div class="row">
                 <div class="form-group col-sm-12 col-md-6">
                     <label for="titre">Titre de l'ouvrage :</label>
-                    <input type="text" id="titre" name="title" class="form-control"
-                           value="<?php if (isset($_POST['title'])) echo $_POST['title'] ?>">
-                    <?php if (isset($errors['title'])) echo $errors['title']; ?>
+                    <input type="text" id="titre" name="title" class="form-control" required
+                           value="<?= $data['title'] ?? '' ?>"><span class="error">
+                    <?php if (isset($errors['title'])) echo '* ' . $errors['title']; ?></span>
                 </div>
+
                 <div class="form-group col-sm-12 col-md-6">
                     <label for="auteur">Auteur :</label>
                     <input type="text" id="auteur" name="author" class="form-control"
-                           value="<?php if (isset($_POST['author'])) echo $_POST['author'] ?>">
-                    <?php if (isset($errors['author'])) echo $errors['author']; ?>
+                           value="<?= $data['author'] ?? '' ?>">
+                    <?php if (isset($errors['author'])) echo '* ' . $errors['author']; ?>
                 </div>
 
             </div>
 
             <div class="form-group">
                 <label for="image">Image :</label>
-                <input type="url" id="image" name="image" required class="form-control"
-                       value="http://<?php if (isset($_POST['image'])) echo $_POST['image'] ?>">
-                <?php if (isset($errors['image'])) echo $errors['image']; ?>
+                <input type="url" id="image" name="image" required class="form-control" required
+                       value="http://<?= $data['image'] ?? '' ?>"><span class="error">
+                    <?php if (isset($errors['image'])) echo '* ' . $errors['image']; ?></span>
             </div>
 
             <div class="form-group">
                 <label for="prix">Prix de l'ouvrage :</label>
-                <input type="number" id="prix" name="price" class="form-control"
-                       value="<?php if (isset($_POST['price'])) echo $_POST['price'] ?>">
-                <?php if (isset($errors['price'])) echo $errors['price']; ?>
+                <input type="number" id="prix" name="price" class="form-control" required
+                       value="<?= $data['price'] ?? '' ?>"><span class="error">
+                    <?php if (isset($errors['price'])) echo '* ' . $errors['price']; ?></span>
             </div>
 
             <div class="row">
                 <div class="form-group col col-sm-6 col-md-3">
                     <label for="annee">Année de parution :</label>
-                    <input type="number" id="annee" name="year" min="1900" max="2099" class="form-control"
-                           value="<?php if (isset($_POST['year'])) echo $_POST['year'] ?>">
-                    <?php if (isset($errors['year'])) echo $errors['year']; ?>
+                    <input type="number" id="annee" name="year" min="1900" max="2099" class="form-control" required
+                           value="<?= $data['year'] ?? '' ?>"><span class="error">
+                        <?php if (isset($errors['year'])) echo '* ' . $errors['year']; ?></span>
                 </div>
 
                 <div class="form-group col col-sm-6 col-md-3">
                     <label for="pages">Nombre de pages :</label>
-                    <input type="number" id="pages" name="pages" class="form-control" onwheel="this.blur()"
-                           value="<?php if (isset($_POST['pages'])) echo $_POST['pages'] ?>">
-                    <?php if (isset($errors['pages'])) echo $errors['pages']; ?>
+                    <input type="number" id="pages" name="pages" class="form-control" onwheel="this.blur()" required
+                           value="<?= $data['pages'] ?? '' ?>"><span class="error">
+                        <?php if (isset($errors['pages'])) echo '* ' . $errors['pages']; ?></span>
                 </div>
 
                 <div class="form-group col col-sm-6 col-md-3">
                     <label for="shaping">Façonnage :</label>
                     <select id="shaping" name="shaping" class="form-control" required>
-                        <option value="">-- Choisissez un façonnage --</option>
+                        <option value="" selected>-- Choisissez un façonnage --</option>
                         <?php foreach ($shapings as $shape) : ?>
-                            <option value="<?= strtolower($shape); ?>" selected>
+                            <option value="<?= strtolower($shape); ?>">
                                 <?= $shape; ?>
                             </option>
                         <?php endforeach; ?>
@@ -174,17 +178,17 @@
 
                 <div class="form-group col col-sm-6 col-md-3">
                     <label for="format">Format :</label>
-                    <input type="text" id="format" name="size" class="form-control"
-                           value="<?php if (isset($_POST['size'])) echo $_POST['size'] ?>">
-                    <?php if (isset($errors['size'])) echo $errors['size']; ?>
+                    <input type="text" id="format" name="size" class="form-control" required
+                           value="<?= $data['size'] ?? '' ?>"><span class="error">
+                        <?php if (isset($errors['size'])) echo '* ' . $errors['size']; ?></span>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="resume">Résumé :</label>
-                <textarea id="resume" name="resume" rows="10"
-                          class="form-control"><?php if (isset($_POST['resume'])) echo $_POST['resume'] ?></textarea>
-                <?php if (isset($errors['resume'])) echo $errors['resume']; ?>
+                <textarea id="resume" name="resume" rows="10" required
+                          class="form-control"><?= $data['resume'] ?? '' ?></textarea><span class="error">
+                    <?php if (isset($errors['resume'])) echo '* ' . $errors['resume']; ?></span>
             </div>
 
             <div>
