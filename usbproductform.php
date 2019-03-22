@@ -65,8 +65,9 @@ if (isset($_POST) && !empty($_POST)) {
 
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="styles/usb.css" />
     <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="styles/usb.css" />
+
 
     <title>USB keys</title>
 </head>
@@ -163,7 +164,8 @@ if (isset($_POST) && !empty($_POST)) {
                 <input type="file" name="image" id="image">
                 <small class="text-danger font-weight-bold"><?= $errors['image'] ?? "" ?></small>
 
-                <input class="send-button" type="submit" value="Envoyer" name="submit">
+                <!-- <input class="send-button" type="submit" value="Envoyer" name="submit"> -->
+                <button type="submit" class="btn btn_item send-button"> Envoyer </button>
 
         </form>
 
