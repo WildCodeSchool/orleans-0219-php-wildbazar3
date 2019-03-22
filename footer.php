@@ -41,16 +41,16 @@
           <div class="col">
             <ul class="list-group">
               <li class="list-group-item border-0">
-                <a href="books.html" class="a_footer">Livres</a>
+                <a href="books.html" class="a_footer">Books</a>
               </li>
               <li class="list-group-item border-0">
-                <a href="toys.html" class="a_footer">Jouets</a>
+                <a href="toys.html" class="a_footer">Toys</a>
               </li>
               <li class="list-group-item border-0">
-                <a href="poubelle.html" class="a_footer">Poubelles</a>
+                <a href="poubelle.html" class="a_footer">Trash bins</a>
               </li>
               <li class="list-group-item border-0">
-                <a href="usb.php" class="a_footer">Clés USB</a>
+                <a href="usb.php" class="a_footer">USB keys</a>
               </li>
             </ul>
           </div>

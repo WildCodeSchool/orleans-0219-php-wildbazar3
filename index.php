@@ -37,7 +37,7 @@
 
         <div class="jumbotron w-100">
           <h1 class="display-1 mx-auto">WILD BAZAR</h1>
-          <p class="lead">On y trouve de tout et surtout du n'importe quoi !</p>
+          <p class="lead">Everything and Anything ! And even more...</p>
     <!--  <button type="button" class="btn btn_item">Vendez !</button>    -->
         </div>
 
@@ -80,9 +80,9 @@
                   <div class="categorie_item_info text-center">
                     <div class="categorie_item_title">books</div>
                       <i class="categorie_item_sep"></i>
-                      <div class="categorie_item_p">Pour voir tous nos magnifiques livres !</div>
+                      <div class="categorie_item_p">To see all our magnificent books ! And even more...</div>
                       <div class="btn_itemblock">
-                <a href="books.html" class="btn_item">En savoir plus</a>
+                <a href="books.php" class="btn_item">To learn more</a>
               </div>
                   </div>
                 </div>
@@ -92,11 +92,11 @@
                 <div class="categorie_item">
                   <img src="img/toys_categorie.jpg" class="categorie_img" alt="Voir tous nos livres">
                   <div class="categorie_item_info text-center">
-                    <div class="categorie_item_title">Jouets</div>
+                    <div class="categorie_item_title">Toys</div>
                       <i class="categorie_item_sep"></i>
-                      <div class="categorie_item_p">Des jouets par milliers ! Et plus encore...</div>
+                      <div class="categorie_item_p">Thousands of toys ! And even more...</div>
                       <div class="btn_itemblock">
-                <a href="toys.html" class="btn_item">En savoir plus</a>
+                <a href="jouets.php" class="btn_item">To learn more</a>
               </div>
                   </div>
                 </div>
@@ -106,11 +106,11 @@
                 <div class="categorie_item">
                   <img src="img/poubelle_categorie.jpg" class="categorie_img" alt="Voir tous nos livres">
                   <div class="categorie_item_info text-center">
-                    <div class="categorie_item_title">Poubelles</div>
+                    <div class="categorie_item_title">Trash bins</div>
                       <i class="categorie_item_sep"></i>
-                      <div class="categorie_item_p">Quelque chose à jeter ? On a tout ce qu'il vous faut.</div>
+                      <div class="categorie_item_p">Something to throw away ? We got it !</div>
                       <div class="btn_itemblock">
-                <a href="trash.html" class="btn_item">En savoir plus</a>
+                <a href="poubelles.php" class="btn_item">To learn more</a>
               </div>
                   </div>
                 </div>
@@ -120,11 +120,11 @@
                 <div class="categorie_item">
                   <img src="img/usb_categorie.jpg" class="categorie_img" alt="Voir tous nos livres">
                   <div class="categorie_item_info text-center">
-                    <div class="categorie_item_title">Clés USB</div>
+                    <div class="categorie_item_title">USB keys</div>
                       <i class="categorie_item_sep"></i>
-                      <div class="categorie_item_p">Du stockage pour tous les goûts et toutes les couleurs.</div>
+                      <div class="categorie_item_p">Storage for all the tastes ! And even more...</div>
                       <div class="btn_itemblock">
-                <a href="usb.php" class="btn_item">En savoir plus</a>
+                <a href="usb.php" class="btn_item">To learn more</a>
               </div>
                   </div>
                 </div>

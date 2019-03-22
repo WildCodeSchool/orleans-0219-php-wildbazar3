@@ -2,8 +2,8 @@
 
 function cleanData(array $postData) :array
 {
-    foreach ($postData as $name => $value) {
-        $data($name) = trim($value);
+    foreach ($postData as $key => $value) {
+        $data[$key] = htmlentities(trim($value));
     }
 
     return $data;
