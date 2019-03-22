@@ -56,7 +56,7 @@
 
 
        <div>
-           <a href="usbproductform.php"><input class="send-button ajout" type="submit" value="Ajouter un produit" name="ajouter"></a>
+           <a href="usbproductform.php"><input class="send-button ajout" type="submit" value="Add a product" name="add"></a>
        </div>
 
        <section class="container">

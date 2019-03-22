@@ -6,7 +6,7 @@ if (isset($_POST) && !empty($_POST)) {
     $errors = [];
 
     foreach ($_POST as $key=>$value) {  //
-        $_POST[$key] = trim($value);
+        $_POST[$key] = htmlspecialchars(trim($value));
     }
 
 
@@ -109,14 +109,14 @@ if (isset($_POST) && !empty($_POST)) {
 <section>
 
 
-    <h2>Ajouter une clé USB</h2>
+    <h2>Add a USB Key</h2>
 
     <div id="formulaire">
 
 
         <form method="POST" action="usbproductform.php">
             <div class="form-group">
-                <label for="name">Nom</label>
+                <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" name="name" required minlength="3" maxlength="100"
                        value="<?= $_POST['name'] ?? "" ?>">
                 <small class="text-danger font-weight-bold"><?= $errors['name'] ?? "" ?></small>
@@ -138,7 +138,7 @@ if (isset($_POST) && !empty($_POST)) {
             </div>-->
 
             <div class="form-group">
-                <label for="size">Taille</label>
+                <label for="size">Size</label>
                 <input class="radioUSB" type="radio" name="size" value="16" checked> 16 GB
                 <input class="radioUSB" type="radio" name="size" value="32"> 32 GB
                 <input class="radioUSB" type="radio" name="size" value="64"> 64 GB
@@ -148,24 +148,24 @@ if (isset($_POST) && !empty($_POST)) {
 
 
             <div class="form-group">
-                <label for="price">Prix</label>
+                <label for="price">Price</label>
                 <input type="number" class="form-control" id="price" name="price" required minlength="1" maxlength="4"
                        value="<?= $_POST['price'] ?? "" ?>" onwheel="this.blur()">
                 <small class="text-danger font-weight-bold"><?= $errors['price'] ?? "" ?></small>
             </div>
             <div class="form-group">
-                <label for="modal">Texte</label>
+                <label for="modal">Text</label>
                 <input type="text" class="form-control" id="modal" name="modal" required minlength="20" maxlength="255"
                        value="<?= $_POST['modal'] ?? "" ?>">
                 <small class="text-danger font-weight-bold"><?= $errors['modal'] ?? "" ?></small>
             </div>
 
-                Choisir un image:
+                Select an image:
                 <input type="file" name="image" id="image">
                 <small class="text-danger font-weight-bold"><?= $errors['image'] ?? "" ?></small>
 
                 <!-- <input class="send-button" type="submit" value="Envoyer" name="submit"> -->
-                <button type="submit" class="btn btn_item send-button"> Envoyer </button>
+                <button type="submit" class="btn btn_item send-button"> Send </button>
 
         </form>
 
