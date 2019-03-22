@@ -27,7 +27,7 @@
 
     <div class="jumbotron w-100">
         <h1 class="display-1 mx-auto">WILD BOOKS</h1>
-        <p class="lead">Des livres par centaines, des livres par milliers !</p>
+        <p class="lead">Hundreds of books ! Thousands of books ! And ONE more...</p>
         <!--  <button type="button" class="btn btn_item">Vendez !</button>    -->
     </div>
 
@@ -136,7 +136,7 @@
 
             <div class="form-group">
                 <label for="image">Image :</label>
-                <input type="url" id="image" name="image" required class="form-control" required
+                <input type="url" id="image" name="image" class="form-control" required
                        value="http://<?= $data['image'] ?? '' ?>"><span class="error">
                     <?php if (isset($errors['image'])) echo '* ' . $errors['image']; ?></span>
             </div>
