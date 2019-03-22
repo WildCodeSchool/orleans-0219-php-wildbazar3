@@ -5,6 +5,13 @@ if (isset($_POST) && !empty($_POST)) {
 
     $errors = [];
 
+    foreach ($_POST as $key=>$value) {  //
+        $_POST[$key] = trim($value);
+    }
+
+
+
+
     if (empty($_POST['name']) OR strlen($_POST['name']) < 4) {
         $errors['name'] = "The name must be greater than 3 characters!";
     }
@@ -13,7 +20,7 @@ if (isset($_POST) && !empty($_POST)) {
         $errors['description'] = "The description should be longer than 20 characters.";
     }
 
-    if (empty($_POST['description'])) {
+    if (empty($_POST['size']) OR $_POST['size'] < 5 OR $_POST['size'] > 300) {
         $errors['size'] = "How on earth did you screw up the size?";
     }
 
@@ -107,7 +114,7 @@ if (isset($_POST) && !empty($_POST)) {
 
         <form method="POST" action="usbproductform.php">
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Nom</label>
                 <input type="text" class="form-control" id="name" name="name" required minlength="3" maxlength="100"
                        value="<?= $_POST['name'] ?? "" ?>">
                 <small class="text-danger font-weight-bold"><?= $errors['name'] ?? "" ?></small>
@@ -115,7 +122,7 @@ if (isset($_POST) && !empty($_POST)) {
 
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea name="description" id="description" class="form-control" rows="4" cols="25" required minlength="20" maxlength="255"  placeholder="A brief description of the product..."><?= $_POST['description'] ?? "" ?></textarea>
+                <textarea name="description" id="description" class="form-control" rows="4" cols="25" required minlength="20" maxlength="255"  placeholder="Une description courte du produit..."><?= $_POST['description'] ?? "" ?></textarea>
                 <small class="text-danger font-weight-bold"><?= $errors['description'] ?? "" ?></small>
             </div>
 
@@ -129,7 +136,7 @@ if (isset($_POST) && !empty($_POST)) {
             </div>-->
 
             <div class="form-group">
-                <label for="size">Size</label>
+                <label for="size">Taille</label>
                 <input class="radioUSB" type="radio" name="size" value="16" checked> 16 GB
                 <input class="radioUSB" type="radio" name="size" value="32"> 32 GB
                 <input class="radioUSB" type="radio" name="size" value="64"> 64 GB
@@ -139,20 +146,20 @@ if (isset($_POST) && !empty($_POST)) {
 
 
             <div class="form-group">
-                <label for="price">Price</label>
+                <label for="price">Prix</label>
                 <input type="number" class="form-control" id="price" name="price" required minlength="1" maxlength="4"
-                       value="<?= $_POST['price'] ?? "" ?>">
+                       value="<?= $_POST['price'] ?? "" ?>" onwheel="this.blur()">
                 <small class="text-danger font-weight-bold"><?= $errors['price'] ?? "" ?></small>
             </div>
             <div class="form-group">
-                <label for="modal">Modal text</label>
+                <label for="modal">Texte</label>
                 <input type="text" class="form-control" id="modal" name="modal" required minlength="20" maxlength="255"
                        value="<?= $_POST['modal'] ?? "" ?>">
                 <small class="text-danger font-weight-bold"><?= $errors['modal'] ?? "" ?></small>
             </div>
 
-                Select image to upload:
-                <input type="file" name="image" id="image" required>
+                Choisir un image:
+                <input type="file" name="image" id="image">
                 <small class="text-danger font-weight-bold"><?= $errors['image'] ?? "" ?></small>
 
                 <input class="send-button" type="submit" value="Envoyer" name="submit">

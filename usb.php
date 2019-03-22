@@ -55,6 +55,10 @@
        <!---------------------- USB -------------------------->
 
 
+       <div>
+           <a href="usbproductform.php"><input class="send-button ajout" type="submit" value="Ajouter un produit" name="ajouter"></a>
+       </div>
+
        <section class="container">
           <div class="row">
 
