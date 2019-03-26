@@ -1,5 +1,9 @@
 <?php
 
+require 'connec.php';
+
+$pdo = new PDO(DSN, USER, PASS);
+
 
 if (isset($_POST) && !empty($_POST)) {
 
@@ -42,6 +46,22 @@ if (isset($_POST) && !empty($_POST)) {
  //   }
 
     if (!$errors) {
+
+            $query = "INSERT INTO usbkey (name, image_link, text, data_target, size, price, modal_text) VALUES (:name, :image_link, :text, :data_target, :size, :price, :modal_text)";
+            $statement = $pdo->prepare($query);
+            $statement->bindValue(':name', $_POST['name'], PDO::PARAM_STR);
+            $statement->bindValue(':image_link', $_POST['image'], PDO::PARAM_STR);
+            $statement->bindValue(':text', $_POST['description'], PDO::PARAM_STR);
+            $statement->bindValue(':data_target', $_POST['dataTarget'], PDO::PARAM_STR);
+            $statement->bindValue(':size', $_POST['size'], PDO::PARAM_STR);
+            $statement->bindValue(':price', $_POST['price'], PDO::PARAM_STR);
+            $statement->bindValue(':modal_text', $_POST['modal'], PDO::PARAM_STR);
+            $statement->execute();
+            header('Location: index.php');
+
+
+
+
         header("location: usbproductform.php");
         exit();
     }
