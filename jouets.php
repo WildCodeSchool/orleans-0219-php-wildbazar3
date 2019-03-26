@@ -22,66 +22,60 @@
     <body>
 
         <header>
-
-                        <!-- NAVBAR -->
-
-            <nav class="navbar fixed-top">
-
-                <a class="navbar-brand" href="index.html">
-                    <img src="https://avatars-02.gitter.im/group/iv/3/57542c32c43b8c6019770da9" width="30" height="30" class="d-inline-block align-top" alt="Wild Code School">
-                    TEST
-                </a>
-                
-                <ul class="nav justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link" href="books.html">Books </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="jouets.html">Jouets </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="poubelles.html">Poubelles </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Clefs USB.html">Clefs USB </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="page_test.html">TEST </a>
-                    </li>
-                </ul>
-
-            </nav>
-
-            
+            <!-- NAVBAR -->
+            <?php
+            include 'header.php';
+            ?>
+            <!-- JUMBOTRON -->
             <div class="jumbotron">
-                
                 <div class="sliding-background">
-                    
-            
                     <h1 class="display-1 mx-auto">J O U E T S</h1>
                     <p class="lead">On y trouve de tout et surtout du n'importe quoi !</p>
-                    
                 </div>
                 <button type="button" class="btn btn_item btn-block">Vendez !</button>
             </div>
 
         </header>
-
+        <!-- SECTION CARDS -->
         <div class="card-deck">
             <!-- Card 01 -->
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" data-toggle="modal">
                 <div class="card">
                     <img src="https://images.king-jouet.com/6/GU708842_6.jpg" class="card-img-top" alt="Téléphone sur roulette">
                     <div class="price_item">25€
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Teddy le teléphone</h5>
-                        <a href="#" class="btn btn-primary">Acheter</a>
+                        <h5 class="card-title"><?php echo $toys(['name'])?></h5>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            En savoir +
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- Card 02 -->
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" type="input">
                 <div class="card">
                     <img src="https://www.baby-lux.com/media/catalog/product/cache/1/image/1000x/040ec09b1e35df139433887a97daa66f/j/o/jouet-pieuvre-musicale-lamaze.jpg" class="card-img-top" alt="Peluche pieuvre">
                     <div class="price_item">25€
@@ -92,6 +86,9 @@
                     </div>
                 </div> 
             </div>
+
+
+
             <!-- Card 03 -->
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card">
@@ -262,7 +259,9 @@
             </div>
 
         </div>
-
+        <?php
+        include 'footer.php'
+        ?>
         <!-- Optional JavaScript -->
 
         <!-- Script navbar -->
