@@ -38,31 +38,31 @@
         </header>
         <!-- SECTION CARDS -->
         <div class="card-deck">
-            <!-- Card 01 -->
+            <!-- Card 01 VARIABLE -->
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" data-toggle="modal">
                 <div class="card">
-                    <img src="https://images.king-jouet.com/6/GU708842_6.jpg" class="card-img-top" alt="Téléphone sur roulette">
-                    <div class="price_item">25€
+      <!--IMAGE + ALT -->              <img src="https://images.king-jouet.com/6/GU708842_6.jpg" class="card-img-top" alt="Téléphone sur roulette">
+    <!--PRIX -->                <div class="price_item">25€
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $toys(['name'])?></h5>
+                      <!--NOM ARTICLE -->  <h5 class="card-title">Vrombi la voiture</h5>
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                      <!--ID MODAL VARIABLE -->                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
                             En savoir +
                         </button>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <!--ID MODAL VARIABLE -->                         <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <!--NOM ARTICLE -->                                        <h5 class="modal-title" id="exampleModalLabel">Vrombi la voiture</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        ...
+                                      <!--DESCRIPTION -->                             ...
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
