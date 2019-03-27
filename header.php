@@ -19,10 +19,10 @@
                         Catégorie
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item a_header" href="books.html">Books</a>
-                    <a class="dropdown-item a_header" href="jouets.html">Jouets</a>
-                    <a class="dropdown-item a_header" href="poubelles.html">Poubelles</a>
-                    <a class="dropdown-item a_header" href="usb.php">Clefs USB</a>
+                    <a class="dropdown-item a_header" href="books.php">Books</a>
+                    <a class="dropdown-item a_header" href="jouets.php">Toys</a>
+                    <a class="dropdown-item a_header" href="poubelles.php">Trash cans</a>
+                    <a class="dropdown-item a_header" href="usb.php">USB keys</a>
                   </div>
                 </li>
                 <li class="nav-item">

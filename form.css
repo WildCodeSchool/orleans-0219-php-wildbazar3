@@ -51,7 +51,7 @@ nav{
 
 .navbar{
     position: fixed;
-    opacity:0.2;
+    opacity:0.5;
 }
 
 .navbar:hover{
@@ -131,24 +131,31 @@ nav{
     text-align: center;
     overflow: hidden;
     background-image: url(img/shop.jpg);
-    max-height: 700px;
+    max-height: 800px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    padding-left: 15rem;
+    padding-right: 15rem;
 }
 
 
 .jumbotron h1{
-    font-size: calc(6vw + 50px);
+    font-size: calc(6vw + 20px);
     margin-top: 10%;
     font-family: 'Montserrat', sans-serif;
-    color: #f1ad1d;
+    color: rgba(255,255,255,1);
+    background-color: rgba(241,173,29,1);
+    margin-bottom: 5%;
 }
 
 .lead{
-    padding-bottom: 100%;
-    color: white;
+    margin-bottom: 100%;
+    color: black;
+    background-color: rgba(255,255,255, 0.8);
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* Bouton */
@@ -182,10 +189,15 @@ nav{
 
 /* formulaire */
 
+.error{
+    color:#ff0000;
+}
+
 .form-control{
     font-size: calc(0.3vw + 10px);
     font-family: 'Lato', sans-serif;
     color: #505050;
+    border-radius: 0px;
 }
 
 .form-group{

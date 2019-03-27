@@ -97,7 +97,7 @@ nav{
 
 .navbar{
 	position: fixed;
-	opacity:0.2;
+	opacity:0.5;
 }
 
 .navbar:hover{
@@ -149,30 +149,38 @@ nav{
 
 .img_header {
 	max-width: 55px;
+	opacity: 1;
 }
 	
 .jumbotron{
 	text-align: center;
 	overflow: hidden;
 	background-image: url(img/shop.jpg);
-	max-height: 700px;
+	max-height: 800px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+	padding-left: 15rem;
+	padding-right: 15rem;
 }
 
 
 .jumbotron h1{
-	font-size: calc(6vw + 50px);
+	font-size: calc(6vw + 20px);
 	margin-top: 10%;
 	font-family: 'Montserrat', sans-serif;
-	color: #f1ad1d;
+	color: rgba(255,255,255,1);
+	background-color: rgba(241,173,29,1);
+	margin-bottom: 5%;
 }
 
 .lead{
-	padding-bottom: 100%;
-	color: white;
+	margin-bottom: 100%;
+	color: black;
+	background-color: rgba(255,255,255, 0.8);
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 
@@ -247,8 +255,12 @@ nav{
 
 /*Button parts */
 
-.btn_itemblock{
+.btn_itemblock2{
 	margin-top: 35px;
+}
+
+.btn_itemblock{
+	margin-top: 60px;
 }
 
 .btn_item{
@@ -268,6 +280,23 @@ nav{
 	border: solid 1px #333333;
 }
 
+.btn_item2{
+	text-decoration: none;
+	padding: 13px 35px;
+	color: #f1ad1d;
+	font-size: calc(0.2vw + 10px);
+	font-weight: 700;
+	background-image: none;
+	background-color: #505050;
+}
+
+.btn_item2:hover{
+	color: white;
+	background-color: #f1ad1d;
+	text-decoration: none;
+	border: solid 1px #f1ad1d;
+}
+
 
 
 
@@ -275,8 +304,8 @@ nav{
 
 /*About Us*/
 .border_middle {
-  border-top: 5px solid #f1ad1d;
-  border-bottom: 5px solid #f1ad1d;
+  border-top: 3px solid #f1ad1d;
+  border-bottom: 3px solid #f1ad1d;
   position: relative;
 }
 .border_middle:after {
@@ -291,7 +320,7 @@ nav{
 }
 
 .aboutusphoto {
-	max-width: 350px;
+	max-width: 250px;
 	border-radius: 50%;
 }
 
@@ -307,7 +336,7 @@ nav{
 
 #about{
 
-	background-color: #333333;
+	background-color: #505050;
 }
 
 .cartouche{
