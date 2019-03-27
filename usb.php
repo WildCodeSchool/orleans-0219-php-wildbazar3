@@ -82,7 +82,7 @@
                   $image = $usbkey["image_link"] ;
                   $name = $usbkey["name"] ;
                   $text = $usbkey['text'] ;
-                  $target = $usbkey['data_target'] ;
+                  $target = $usbkey['id'] ;
                   $modalText = $usbkey['modal_text'] ;
                   $price = $usbkey['price'] ;
                   $size = $usbkey['size'] ;
