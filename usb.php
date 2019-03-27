@@ -4,6 +4,7 @@
 
 
     $pdo = new PDO(DSN, USER, PASS);
+    $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     $query = "SELECT * FROM usbkey";
     $statement = $pdo->query($query);
     $usbkeysFromDB = $statement->fetchAll(PDO::FETCH_ASSOC);

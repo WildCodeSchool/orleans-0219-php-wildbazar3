@@ -3,6 +3,7 @@
 require 'connec.php';
 
 $pdo = new PDO(DSN, USER, PASS);
+$pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 
 
 if (isset($_POST) && !empty($_POST)) {
@@ -37,9 +38,13 @@ if (isset($_POST) && !empty($_POST)) {
         $errors['modal'] = "The modal description should be longer than 20 characters.";
     }
 
- /*   if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-        $errors['modal'] = "L'adresse e-mail n'est pas valide !";
-    }   */
+       if (empty($_POST['url'])) {
+          $errors['url'] = "The URL must be valid";
+      }
+/*
+     if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+          $errors['modal'] = "L'adresse e-mail n'est pas valide !";
+      }   */
 
   //  if ($_POST['image'] != "jpg" && $image != "png" && $image != "jpeg" && $image != "gif" ) {
   //      $errors['image'] = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
@@ -47,15 +52,15 @@ if (isset($_POST) && !empty($_POST)) {
 
     if (!$errors) {
 
-            $query = "INSERT INTO usbkey (name, image_link, text, data_target, size, price, modal_text) VALUES (:name, :image_link, :text, :data_target, :size, :price, :modal_text)";
+            $query = "INSERT INTO usbkey (name, image_link, text, size, price, modal_text) VALUES (:name, :image_link, :text, :size, :price, :modal_text)";
             $statement = $pdo->prepare($query);
             $statement->bindValue(':name', $_POST['name'], PDO::PARAM_STR);
-            $statement->bindValue(':image_link', $_POST['image'], PDO::PARAM_STR);
+          //$statement->bindValue(':image_link', $_POST['image'], PDO::PARAM_STR);
             $statement->bindValue(':text', $_POST['description'], PDO::PARAM_STR);
-            $statement->bindValue(':data_target', $_POST['dataTarget'], PDO::PARAM_STR);
-            $statement->bindValue(':size', $_POST['size'], PDO::PARAM_STR);
-            $statement->bindValue(':price', $_POST['price'], PDO::PARAM_STR);
+            $statement->bindValue(':size', $_POST['size'], PDO::PARAM_INT);
+            $statement->bindValue(':price', $_POST['price'], PDO::PARAM_INT);
             $statement->bindValue(':modal_text', $_POST['modal'], PDO::PARAM_STR);
+            $statement->bindValue(':image_link', $_POST['url'], PDO::PARAM_STR);
             $statement->execute();
             header('Location: index.php');
 
@@ -179,10 +184,19 @@ if (isset($_POST) && !empty($_POST)) {
                        value="<?= $_POST['modal'] ?? "" ?>">
                 <small class="text-danger font-weight-bold"><?= $errors['modal'] ?? "" ?></small>
             </div>
-
+            <div class="form-group hidden">
                 Select an image:
                 <input type="file" name="image" id="image">
                 <small class="text-danger font-weight-bold"><?= $errors['image'] ?? "" ?></small>
+            </div>
+            <div class="form-group">
+                <label for="url">Image URL:</label>
+                <input type="url" class="form-control" id="url" name="url" required minlength="10" maxlength="100"
+                       value="<?= $_POST['url'] ?? "" ?>">
+                <small class="text-danger font-weight-bold"><?= $errors['url'] ?? "" ?></small>
+
+
+            </div>
 
                 <!-- <input class="send-button" type="submit" value="Envoyer" name="submit"> -->
                 <button type="submit" class="btn btn_item send-button"> Send </button>
