@@ -1,3 +1,17 @@
+<?php
+
+    require 'connec.php';
+
+
+    $pdo = new PDO(DSN, USER, PASS);
+    $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+    $query = "SELECT * FROM usbkey";
+    $statement = $pdo->query($query);
+    $usbkeysFromDB = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -40,7 +54,7 @@
 
 
                 <h1 class="display-1  mx-auto">USB Keys</h1>
-                <p class="lead ">On y trouve de tout et surtout du n'importe quoi !</p>
+                <p class="lead ">You can find anything and everything... and more !</p>
               </div>
         <!--    <button type="button" class="btn btn_item">Vendez !</button>    -->
             </div>
@@ -49,7 +63,7 @@
         </header>
 
 
-       <?php include 'usbkeyDB.php'; ?>
+        <?php //include 'usbkeyDB.php'; ?>
 
 
        <!---------------------- USB -------------------------->
@@ -64,13 +78,13 @@
 
 
 
-              <?php foreach($usbkeys as $usbkey) {
+              <?php foreach($usbkeysFromDB as $usbkey) {
 
-                  $image = $usbkey["image"] ;
+                  $image = $usbkey["image_link"] ;
                   $name = $usbkey["name"] ;
                   $text = $usbkey['text'] ;
-                  $target = $usbkey['dataTarget'] ;
-                  $modalText = $usbkey['modalText'] ;
+                  $target = $usbkey['id'] ;
+                  $modalText = $usbkey['modal_text'] ;
                   $price = $usbkey['price'] ;
                   $size = $usbkey['size'] ;
 

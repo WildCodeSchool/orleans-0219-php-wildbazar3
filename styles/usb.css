@@ -1,5 +1,5 @@
 body{
-	background-color: rgba(O,O,O,O.O5);
+	background-color: rgba(0,0,0,0.05);
 }
 
 
@@ -49,14 +49,16 @@ body{
 
 
 .usbprice {
-	font-style: bold;
+	font-weight: bold;
 	font-size: 1.2rem;
 	float: right;
-	padding-top: 4rem;
+	padding-top: 6rem;
+	padding-right: 1rem;
 }
 
 .characteristics {
 	text-decoration: underline;
+	margin-top: 1rem;
 }
 
 .btn-primary {
@@ -167,7 +169,7 @@ nav{
 	margin-top: 0.5rem;
 	background-color: #505050;
 	border: #F1AD1D;
-	border-radius: 0px;
+	border-radius: 0rem;
 }
 
 .a_header{
@@ -205,4 +207,8 @@ li a:link, a:visited {
 li a:hover, a:active {
 	color: #505050;
 	padding: .3rem 1.25rem;
+}
+
+.hidden {
+	display: none;
 }
