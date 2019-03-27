@@ -1,3 +1,19 @@
+<?php
+
+require 'connec.php';
+
+
+$pdo = new PDO(DSN, USER, PASS);
+
+
+
+$query = "SELECT * FROM book";
+
+$statement = $pdo->query($query);
+$books = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -43,10 +59,11 @@
             <?php
 
 
-            include 'Books_modal_cards/arrayBooks.php';
 
 
-            foreach ($books as $key => $book) {
+
+            foreach ($books as $book) {
+
                 include 'Books_modal_cards/cardBooks.php';
                 include 'Books_modal_cards/modalBooks.php';
             }
