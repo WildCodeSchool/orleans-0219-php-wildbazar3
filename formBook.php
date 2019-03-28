@@ -50,7 +50,11 @@
 
         <?php
 
+        require 'connec.php';
         require 'src/function.php';
+
+        $pdo = new PDO(DSN, USER, PASS);
+        $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -62,54 +66,68 @@
 
             // Validation part
 
-            if (empty($_POST['title'])) {
-                $errors['title'] = 'Un titre est obligatoire !';
+            if (empty($data['bookTitle'])) {
+                $errors['bookTitle'] = 'Un titre est obligatoire !';
             }
 
-
-            if (empty($_POST['image'])) {
+            if (empty($data['image'])) {
                 $errors['image'] = 'C\'est mieux avec une image !';
             }
 
-            if (empty($_POST['price'])) {
+            if (empty($data['price'])) {
                 $errors['price'] = 'Le prix est obligatoire !';
             }
 
-            if (empty($_POST['year'])) {
-                $errors['year'] = 'L\'année de parution doit être entre 1800 et 2099';
+            if (empty($data['bookYear'])) {
+                $errors['bookYear'] = 'L\'année de parution doit être entre 1800 et 2099';
             }
 
-            if (empty($_POST['pages'])) {
-                $errors['pages'] = 'Le nombre de pages est obligatoire !';
+            if (empty($data['bookPage'])) {
+                $errors['bookPage'] = 'Le nombre de pages est obligatoire !';
             }
 
-            if (empty($_POST['shaping'])) {
-                $errors['shaping'] = 'Le façonnage est obligatoire !';
+            if (empty($data['bookShaping'])) {
+                $errors['bookShaping'] = 'Le façonnage est obligatoire !';
             }
 
-            if (empty($_POST['size'])) {
-                $errors['size'] = 'Le format est obligatoire !';
+            if (empty($data['bookSize'])) {
+                $errors['bookSize'] = 'Le format est obligatoire !';
             }
 
-            if (empty($_POST['resume'])) {
-                $errors['resume'] = 'Un résumé est obligatoire !';
+            if (empty($data['bookResume'])) {
+                $errors['bookResume'] = 'Un résumé est obligatoire !';
             }
 
-            // check errors
 
-            if (count($errors) == 0) {
+
+            if (empty($errors)) {
+                $query = "INSERT INTO book (image, bookTitle, bookAuthor, price, bookYear, bookPage, bookShaping, bookSize, bookResume)
+                          VALUES (:image, :bookTitle, :bookAuthor, :price, :bookYear, :bookPage, :bookShaping, :bookSize, :bookResume)";
+
+                $statement= $pdo->prepare($query);
+
+                $statement->bindValue(':image', $data['image'], PDO::PARAM_STR);
+                $statement->bindValue(':bookTitle', $data['bookTitle'], PDO::PARAM_STR);
+                $statement->bindValue(':bookAuthor', $data['bookAuthor'], PDO::PARAM_STR);
+                $statement->bindValue(':price', $data['price'], PDO::PARAM_INT);
+                $statement->bindValue(':bookYear', $data['bookYear'], PDO::PARAM_INT);
+                $statement->bindValue(':bookPage', $data['bookPage'], PDO::PARAM_INT);
+                $statement->bindValue(':bookShaping', $data['bookShaping'], PDO::PARAM_STR);
+                $statement->bindValue(':bookSize', $data['bookSize'], PDO::PARAM_STR);
+                $statement->bindValue(':bookResume', $data['bookResume'], PDO::PARAM_STR);
+                $statement->execute();
+
                 header('location:success.php');
                 exit();
             }
 
-
         }
 
         $shapings = [
-            'Broché',
-            'Broché avec jaquette',
-            'Dos carré-collé',
-            'Dos carré-collé avec jaquette',
+            'Broch&eacute;',
+            'Broch&eacute; avec jaquette',
+            'Dos carr&eacute;-coll&eacute;',
+            'Dos carr&eacute;-coll&eacute; avec jaquette',
             'Wire-O',
             'Flatbook',
         ];
@@ -120,16 +138,16 @@
             <div class="row">
                 <div class="form-group col-sm-12 col-md-6">
                     <label for="titre">Titre de l'ouvrage :</label>
-                    <input type="text" id="titre" name="title" class="form-control" required
-                           value="<?= $data['title'] ?? '' ?>"><span class="error">
-                    <?php if (isset($errors['title'])) echo '* ' . $errors['title']; ?></span>
+                    <input type="text" id="titre" name="bookTitle" class="form-control" required
+                           value="<?= $data['bookTitle'] ?? '' ?>"><span class="error">
+                    <?php if (isset($errors['bookTitle'])) echo '* ' . $errors['bookTitle']; ?></span>
                 </div>
 
                 <div class="form-group col-sm-12 col-md-6">
                     <label for="auteur">Auteur :</label>
-                    <input type="text" id="auteur" name="author" class="form-control"
-                           value="<?= $data['author'] ?? '' ?>">
-                    <?php if (isset($errors['author'])) echo '* ' . $errors['author']; ?>
+                    <input type="text" id="auteur" name="bookAuthor" class="form-control"
+                           value="<?= $data['bookAuthor'] ?? '' ?>">
+                    <?php if (isset($errors['bookAuthor'])) echo '* ' . $errors['bookAuthor']; ?>
                 </div>
 
             </div>
@@ -137,7 +155,7 @@
             <div class="form-group">
                 <label for="image">Image :</label>
                 <input type="url" id="image" name="image" class="form-control" required
-                       value="http://<?= $data['image'] ?? '' ?>"><span class="error">
+                       value="<?= $data['image'] ?? '' ?>"><span class="error">
                     <?php if (isset($errors['image'])) echo '* ' . $errors['image']; ?></span>
             </div>
 
@@ -151,21 +169,21 @@
             <div class="row">
                 <div class="form-group col col-sm-6 col-md-3">
                     <label for="annee">Année de parution :</label>
-                    <input type="number" id="annee" name="year" min="1900" max="2099" class="form-control" required
-                           value="<?= $data['year'] ?? '' ?>"><span class="error">
-                        <?php if (isset($errors['year'])) echo '* ' . $errors['year']; ?></span>
+                    <input type="number" id="annee" name="bookYear" min="1900" max="2099" class="form-control" required
+                           value="<?= $data['bookYear'] ?? '' ?>"><span class="error">
+                        <?php if (isset($errors['bookYear'])) echo '* ' . $errors['bookYear']; ?></span>
                 </div>
 
                 <div class="form-group col col-sm-6 col-md-3">
                     <label for="pages">Nombre de pages :</label>
-                    <input type="number" id="pages" name="pages" class="form-control" onwheel="this.blur()" required
-                           value="<?= $data['pages'] ?? '' ?>"><span class="error">
-                        <?php if (isset($errors['pages'])) echo '* ' . $errors['pages']; ?></span>
+                    <input type="number" id="pages" name="bookPage" class="form-control" onwheel="this.blur()" required
+                           value="<?= $data['bookPage'] ?? '' ?>"><span class="error">
+                        <?php if (isset($errors['bookPage'])) echo '* ' . $errors['bookPage']; ?></span>
                 </div>
 
                 <div class="form-group col col-sm-6 col-md-3">
                     <label for="shaping">Façonnage :</label>
-                    <select id="shaping" name="shaping" class="form-control" required>
+                    <select id="shaping" name="bookShaping" class="form-control" required>
                         <option value="" selected>-- Choisissez un façonnage --</option>
                         <?php foreach ($shapings as $shape) : ?>
                             <option value="<?= strtolower($shape); ?>">
@@ -178,17 +196,17 @@
 
                 <div class="form-group col col-sm-6 col-md-3">
                     <label for="format">Format :</label>
-                    <input type="text" id="format" name="size" class="form-control" required
-                           value="<?= $data['size'] ?? '' ?>"><span class="error">
-                        <?php if (isset($errors['size'])) echo '* ' . $errors['size']; ?></span>
+                    <input type="text" id="format" name="bookSize" class="form-control" required
+                           value="<?= $data['bookSize'] ?? '' ?>"><span class="error">
+                        <?php if (isset($errors['bookSize'])) echo '* ' . $errors['bookSize']; ?></span>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="resume">Résumé :</label>
-                <textarea id="resume" name="resume" rows="10" required
-                          class="form-control"><?= $data['resume'] ?? '' ?></textarea><span class="error">
-                    <?php if (isset($errors['resume'])) echo '* ' . $errors['resume']; ?></span>
+                <textarea id="resume" name="bookResume" rows="10" required
+                          class="form-control"><?= $data['bookResume'] ?? '' ?></textarea><span class="error">
+                    <?php if (isset($errors['bookResume'])) echo '* ' . $errors['bookResume']; ?></span>
             </div>
 
             <div>
